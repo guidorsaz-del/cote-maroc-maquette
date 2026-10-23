@@ -1,0 +1,67 @@
+<!-- meta {"title": "Nos voyages au Maroc · Côté Maroc", "description": "Sept voyages au Maroc conçus par Côté Maroc : circuit accompagné, petit groupe, voyages privés et séjours. Filtrez par formule, durée, budget et mois de départ.", "whatsapp": "Bonjour, je cherche un voyage au Maroc et j'aimerais un conseil."} -->
+  <section class="section section-sable">
+    <div class="conteneur">
+      <span class="etiquette">Nos voyages</span>
+      <h1>Sept voyages, et le vôtre</h1>
+      <p class="sous-titre">Des itinéraires que nous avons construits et que nous connaissons. Filtrez par formule, durée, budget ou mois de départ. Et si rien ne correspond exactement, le sur mesure commence par un devis.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+      <form class="filtres" aria-label="Filtrer les voyages" onsubmit="return false">
+        <fieldset>
+          <legend>Formule</legend>
+          <button type="button" class="puce" data-filtre="type" data-valeur="" aria-pressed="true">Toutes</button>
+          <button type="button" class="puce" data-filtre="type" data-valeur="accompagne" aria-pressed="false">Circuit accompagné</button>
+          <button type="button" class="puce" data-filtre="type" data-valeur="petit-groupe" aria-pressed="false">Petit groupe</button>
+          <button type="button" class="puce" data-filtre="type" data-valeur="prive" aria-pressed="false">Voyage privé</button>
+          <button type="button" class="puce" data-filtre="type" data-valeur="sejour" aria-pressed="false">Séjour</button>
+        </fieldset>
+        <div class="filtres-ligne">
+          <label>Durée
+            <select data-filtre="jours">
+              <option value="">Toutes</option>
+              <option value="court">Jusqu'à 5 jours</option>
+              <option value="moyen">6 à 9 jours</option>
+              <option value="long">10 jours et plus</option>
+            </select>
+          </label>
+          <label>Budget par personne
+            <select data-filtre="budget">
+              <option value="">Tous</option>
+              <option value="1">Moins de CHF 1'500.-</option>
+              <option value="2">CHF 1'500.- à 2'500.-</option>
+              <option value="3">Plus de CHF 2'500.-</option>
+              <option value="demande">Sur demande</option>
+            </select>
+          </label>
+          <label>Mois de départ
+            <select data-filtre="mois">
+              <option value="">Tous</option>
+              <option value="1">Janvier</option><option value="2">Février</option><option value="3">Mars</option><option value="4">Avril</option><option value="5">Mai</option><option value="6">Juin</option><option value="7">Juillet</option><option value="8">Août</option><option value="9">Septembre</option><option value="10">Octobre</option><option value="11">Novembre</option><option value="12">Décembre</option>
+            </select>
+          </label>
+          <button type="button" class="btn btn-secondaire" data-reinitialiser>Réinitialiser</button>
+        </div>
+        <p class="filtres-compte" aria-live="polite"></p>
+      </form>
+
+      <div class="grille-cartes" data-filtrable>
+<!-- cartes:toutes -->
+      </div>
+      <p class="mentions">Sur les routes du Maroc : prix par personne en chambre double, vols Genève - Marrakech inclus. Circuits Éclipse : exemple de prix, base 2 participants, hors vols internationaux. Séjour bien-être : prix par personne, hors vol. Les voyages privés sont établis sur devis. Le détail de ce que chaque prix comprend figure sur la fiche du voyage.</p>
+    </div>
+  </section>
+
+  <section class="section section-sable" aria-labelledby="titre-envies-voyages">
+    <div class="conteneur">
+      <div class="entete-section">
+        <span class="etiquette">Par envie</span>
+        <h2 id="titre-envies-voyages">Vous préférez partir d'une envie ?</h2>
+      </div>
+      <div class="grille-envies grille-envies-4">
+<!-- envies:apercu -->
+      </div>
+    </div>
+  </section>

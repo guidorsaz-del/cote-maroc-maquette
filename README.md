@@ -1,23 +1,50 @@
 # Maquette du site Côté Maroc, octobre 2026
 
-Maquette statique du futur site de Côté Maroc, marque de Côté Voyages (Martigny), tour-opérateur spécialiste du Maroc. Elle sert à valider l'organisation des pages et le ton avant le développement du site définitif. Les formulaires n'envoient rien.
+Maquette v2 du futur site de Côté Maroc, marque de Côté Voyages (Martigny), tour-opérateur spécialiste du Maroc. Elle sert à valider l'organisation des pages, le ton et les fonctions avant le développement du site définitif.
 
 ## Pages
 
-- `index.html` : accueil (voyages, envies, éclipse 2027, comment ça marche, équipe, quand partir, professionnels, contact)
-- `circuits/sur-les-routes-du-maroc.html` : circuit accompagné, 10 jours
-- `circuits/villes-imperiales.html` : villes impériales millénaires, voyage privé, 8 jours
-- `circuits/nord-sud.html` : du Nord au Sud, voyage privé, 12 jours
-- `circuits/eclipse-petit-groupe.html` : éclipse solaire et trésors impériaux, petit groupe, 10 jours
-- `circuits/eclipse-prive.html` : éclipse solaire et trésors impériaux, en privé, 9 jours
-- `circuits/marrakech-prive.html` : Marrakech privé, séjour en villa, 5 jours
-- `circuits/bien-etre-skoura.html` : séjour bien-être dans la palmeraie de Skoura, 7 nuits
-- `devis.html` : demande de devis en quatre étapes
-- `professionnels.html` : présentation pour les tour-opérateurs et agences, formulaire de contact
+| Page | Contenu |
+|---|---|
+| `index.html` | Accueil : bannière, engagements, voyages phares, envies, éclipse 2027, comment ça marche, contact rapide |
+| `voyages.html` | Les sept voyages et le sur mesure, avec filtres (formule, durée, budget, mois) |
+| `circuits/*.html` | Les sept fiches voyage : programme jour par jour, carte des étapes, prestations, partage et impression |
+| `envies/index.html` et `envies/*.html` | Sept envies, chacune avec ses voyages et ses lieux |
+| `destinations/index.html` et `destinations/*.html` | Dix lieux, avec carte, ce qu'on y voit et les voyages qui y passent |
+| `eclipse-2027.html` | Compte à rebours, comparatif des deux formules, questions fréquentes |
+| `preparer-son-voyage.html` | Quand partir mois par mois, formalités, vols, monnaie, usages, questions fréquentes |
+| `qui-sommes-nous.html` | Côté Voyages depuis 1995, Sandra, l'équipe au Maroc, méthode, engagements |
+| `devis.html` | Demande de devis en quatre étapes, envoi réel vers n8n |
+| `professionnels.html` | Présentation pour les tour-opérateurs et agences, conditions, formulaire |
+| `contact.html` | WhatsApp, e-mail, rendez-vous Calendly intégré, formulaire court |
+| `merci.html` | Confirmation après envoi |
+
+## Comment ça marche
+
+Le site est généré par `python3 outil/build.py` (Python 3 standard, aucune dépendance) à partir du dossier `src/` :
+
+- `src/site.json` : coordonnées, navigation, adresse du webhook n8n, lien Calendly
+- `src/voyages.json`, `src/destinations.json`, `src/envies.json`, `src/faq.json` : les données
+- `src/avis.json` : avis Google de Côté Voyages qui parlent du Maroc (vide tant qu'ils ne sont pas fournis ; la section n'apparaît pas)
+- `src/pages/**` : le contenu de chaque page (le `<main>`), avec un bloc `meta` en tête et des marqueurs `<!-- cartes:phares -->`, `<!-- faq:eclipse -->`, `<!-- carte:slug -->`, etc. remplacés à la génération
+- `src/gabarit/base.html` : en-tête, navigation, bouton WhatsApp flottant, pied de page
+
+Les fichiers HTML à la racine et dans `circuits/`, `envies/`, `destinations/` sont générés : on modifie `src/`, puis on relance la génération.
+
+## Fonctions
+
+- Demande de devis en quatre étapes avec validation, pré-remplissage depuis les fiches (`?voyage=`), les envies (`?envie=`) et les destinations (`?etape=`), envoi au webhook n8n « Côté Maroc, Demandes du site » qui enregistre dans la base Airtable « Côté Maroc », prévient Sandra par e-mail et envoie un accusé de réception au client. Champ anti-robot invisible.
+- Bouton WhatsApp flottant avec message pré-rempli selon la page.
+- Rendez-vous Calendly « Rendez-vous Côté Maroc » intégré sur la page Contact.
+- Partage d'une fiche (partage natif du téléphone ou WhatsApp, e-mail) et feuille de style d'impression.
+- Filtres sans rechargement sur la liste des voyages.
+- Cartes des étapes (Leaflet + OpenStreetMap) sur chaque fiche et chaque destination.
+- Comparatif et compte à rebours sur la page Éclipse 2027.
+- Questions fréquentes balisées schema.org (FAQPage) sur Éclipse 2027 et Préparer son voyage.
 
 ## Technique
 
-HTML, CSS et un peu de JavaScript, sans dépendance ni outil de construction. Polices Google Fonts : Gloock, Jost, JetBrains Mono, Outfit. Le mot « côté » du logo est extrait en vectoriel du logo officiel de Côté Voyages (`img/cote-wordmark.svg`).
+HTML, CSS et JavaScript sans framework. Polices Google Fonts : Gloock, Jost, JetBrains Mono, Outfit. Cartes : Leaflet 1.9.4 depuis unpkg et tuiles OpenStreetMap. Le mot « côté » du logo est extrait en vectoriel du logo officiel de Côté Voyages (`img/cote-wordmark.svg`). Pages en `noindex` tant que la maquette n'est pas le site définitif.
 
 ## Crédits photos
 

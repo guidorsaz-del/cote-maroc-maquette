@@ -1,0 +1,183 @@
+<!-- meta {"title": "Demander un devis · Côté Maroc", "description": "Décrivez votre projet de voyage au Maroc en quatre étapes. Réponse de Sandra sous 24 heures, offre détaillée sous 7 jours. Gratuit et sans engagement.", "whatsapp": "Bonjour, je souhaite un devis pour un voyage au Maroc."} -->
+  <section class="section section-sable">
+    <div class="conteneur">
+      <span class="etiquette">Demande de devis</span>
+      <h1>Décrivez-nous votre voyage</h1>
+      <p class="sous-titre">Quatre étapes courtes. Vous pouvez laisser des cases vides : nous complétons ensemble ensuite. Sandra vous répond sous 24 heures, votre offre arrive sous 7 jours. Gratuit et sans engagement.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur grille-cta">
+      <div>
+        <p class="devis-contexte" hidden>Votre demande concerne : <span></span></p>
+        <ol class="progression-devis" aria-label="Étapes du formulaire">
+          <li>Votre projet</li>
+          <li>Quand et qui</li>
+          <li>Style et budget</li>
+          <li>Vos coordonnées</li>
+        </ol>
+        <form class="etapes-devis" action="#" method="post" data-merci="merci.html" novalidate>
+          <input type="hidden" name="voyage" value="">
+          <input type="text" name="site_web" tabindex="-1" autocomplete="off" class="piege" aria-hidden="true">
+
+          <div class="bloc-etape">
+            <h2>Votre projet</h2>
+            <div class="formulaire">
+              <fieldset>
+                <legend>Qu'est-ce qui vous attire ? <span class="facultatif">(plusieurs choix possibles)</span></legend>
+                <div class="cases">
+                  <label class="case"><input type="checkbox" name="envies" value="Désert et dunes"> Désert et dunes</label>
+                  <label class="case"><input type="checkbox" name="envies" value="Villes impériales"> Villes impériales</label>
+                  <label class="case"><input type="checkbox" name="envies" value="Marrakech"> Marrakech</label>
+                  <label class="case"><input type="checkbox" name="envies" value="Nord et Chefchaouen"> Nord et Chefchaouen</label>
+                  <label class="case"><input type="checkbox" name="envies" value="Atlas et randonnée"> Atlas et randonnée</label>
+                  <label class="case"><input type="checkbox" name="envies" value="Côte atlantique"> Côte atlantique</label>
+                  <label class="case"><input type="checkbox" name="envies" value="Éclipse 2027"> Éclipse du 2 août 2027</label>
+                  <label class="case"><input type="checkbox" name="envies" value="Voyage de noces"> Voyage de noces</label>
+                  <label class="case"><input type="checkbox" name="envies" value="En famille"> En famille</label>
+                  <label class="case"><input type="checkbox" name="envies" value="Bien-être"> Bien-être</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Avez-vous déjà des étapes en tête ?</legend>
+                <div class="radios">
+                  <label class="case"><input type="radio" name="a_des_etapes" value="oui"> Oui, je les indique ci-dessous</label>
+                  <label class="case"><input type="radio" name="a_des_etapes" value="non" checked> Je ne sais pas encore</label>
+                </div>
+              </fieldset>
+              <div class="champ">
+                <label for="etapes">Étapes souhaitées ou votre projet en quelques mots <span class="facultatif">(facultatif)</span></label>
+                <textarea id="etapes" name="etapes" placeholder="Les lieux qui vous attirent, le rythme souhaité, une occasion particulière"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="bloc-etape" hidden>
+            <h2>Quand et qui</h2>
+            <div class="formulaire">
+              <div class="ligne-champs">
+                <div class="champ"><label for="mois">Mois de départ souhaité</label><input type="month" id="mois" name="mois"></div>
+                <div class="champ"><label for="duree">Durée</label>
+                  <select id="duree" name="duree">
+                    <option value="">Choisir</option>
+                    <option>Moins d'une semaine</option>
+                    <option>7 à 10 jours</option>
+                    <option>11 à 14 jours</option>
+                    <option>Plus de deux semaines</option>
+                    <option>Je ne sais pas encore</option>
+                  </select>
+                </div>
+              </div>
+              <fieldset>
+                <legend>Vos dates sont-elles flexibles ?</legend>
+                <div class="radios">
+                  <label class="case"><input type="radio" name="flexible" value="Oui"> Oui, de quelques jours</label>
+                  <label class="case"><input type="radio" name="flexible" value="Non"> Non, dates fixes</label>
+                </div>
+              </fieldset>
+              <div class="ligne-champs">
+                <div class="champ"><label for="adultes">Adultes</label><input type="number" id="adultes" name="adultes" min="1" max="30" inputmode="numeric"></div>
+                <div class="champ"><label for="enfants">Enfants <span class="facultatif">(facultatif)</span></label><input type="number" id="enfants" name="enfants" min="0" max="20" inputmode="numeric"></div>
+              </div>
+              <div class="champ"><label for="ages">Âge des enfants au moment du voyage <span class="facultatif">(facultatif)</span></label><input type="text" id="ages" name="ages" placeholder="Par exemple : 6 et 11 ans"></div>
+            </div>
+          </div>
+
+          <div class="bloc-etape" hidden>
+            <h2>Style et budget</h2>
+            <div class="formulaire">
+              <fieldset>
+                <legend>Budget par personne, hors vols <span class="facultatif">(facultatif)</span></legend>
+                <div class="radios">
+                  <label class="case"><input type="radio" name="budget" value="Moins de CHF 1'500.-"> Moins de CHF 1'500.-</label>
+                  <label class="case"><input type="radio" name="budget" value="CHF 1'500.- à 2'500.-"> CHF 1'500.- à 2'500.-</label>
+                  <label class="case"><input type="radio" name="budget" value="CHF 2'500.- à 4'000.-"> CHF 2'500.- à 4'000.-</label>
+                  <label class="case"><input type="radio" name="budget" value="Plus de CHF 4'000.-"> Plus de CHF 4'000.-</label>
+                  <label class="case"><input type="radio" name="budget" value="À discuter"> Je préfère en parler</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Niveau de confort</legend>
+                <div class="radios">
+                  <label class="case"><input type="radio" name="confort" value="Simple et authentique"> Simple et authentique</label>
+                  <label class="case"><input type="radio" name="confort" value="Confort, hôtels 4* et riads"> Confort, hôtels 4* et riads</label>
+                  <label class="case"><input type="radio" name="confort" value="Charme et haut de gamme"> Charme et haut de gamme</label>
+                </div>
+              </fieldset>
+              <div class="ligne-champs">
+                <div class="champ"><label for="aeroport">Aéroport de départ</label>
+                  <select id="aeroport" name="aeroport">
+                    <option>Genève</option>
+                    <option>Bâle</option>
+                    <option>Zurich</option>
+                    <option>Autre ou à définir</option>
+                  </select>
+                </div>
+                <fieldset>
+                  <legend>Souhaitez-vous que nous incluions les vols ?</legend>
+                  <div class="radios">
+                    <label class="case"><input type="radio" name="vols" value="Oui" checked> Oui</label>
+                    <label class="case"><input type="radio" name="vols" value="Non"> Non, je m'en occupe</label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+
+          <div class="bloc-etape" hidden>
+            <h2>Vos coordonnées</h2>
+            <div class="formulaire">
+              <div class="ligne-champs">
+                <div class="champ"><label for="prenom">Prénom</label><input type="text" id="prenom" name="prenom" autocomplete="given-name" required></div>
+                <div class="champ"><label for="nom">Nom</label><input type="text" id="nom" name="nom" autocomplete="family-name" required></div>
+              </div>
+              <div class="ligne-champs">
+                <div class="champ"><label for="email">E-mail</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+                <div class="champ"><label for="tel">Téléphone <span class="facultatif">(facultatif)</span></label><input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="+41 79 000 00 00"></div>
+              </div>
+              <fieldset>
+                <legend>Comment préférez-vous être recontacté ?</legend>
+                <div class="radios">
+                  <label class="case"><input type="radio" name="canal" value="E-mail" checked> E-mail</label>
+                  <label class="case"><input type="radio" name="canal" value="Téléphone"> Téléphone</label>
+                  <label class="case"><input type="radio" name="canal" value="WhatsApp"> WhatsApp</label>
+                  <label class="case"><input type="radio" name="canal" value="Visio"> Visio</label>
+                </div>
+              </fieldset>
+              <div class="champ"><label for="source">Comment nous avez-vous connus ? <span class="facultatif">(facultatif)</span></label>
+                <select id="source" name="source">
+                  <option value="">Choisir</option>
+                  <option>Côté Voyages</option>
+                  <option>Bouche à oreille</option>
+                  <option>Instagram ou Facebook</option>
+                  <option>LinkedIn</option>
+                  <option>Recherche Google</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <label class="case"><input type="checkbox" name="newsletter" value="oui"> Je souhaite recevoir les nouveautés de Côté Maroc par e-mail, quelques fois par an.</label>
+              <p class="note-formulaire">Vos données servent uniquement à préparer votre devis.</p>
+              <p class="message-envoi" hidden></p>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <aside class="aparte">
+        <h3>Ce qui se passe ensuite</h3>
+        <ul>
+          <li>Sandra lit votre demande, pas un robot.</li>
+          <li>Vous recevez un accusé de réception tout de suite, puis sa réponse sous 24 h, par le canal que vous avez choisi.</li>
+          <li>Votre offre détaillée arrive sous 7 jours, puis vous l'ajustez ensemble.</li>
+          <li>Gratuit et sans engagement.</li>
+        </ul>
+        <h3 style="margin-top:24px">Vous préférez parler ?</h3>
+        <ul>
+          <li>WhatsApp : +41 79 858 72 17</li>
+          <li>E-mail : sandra@cotevoyages.com</li>
+        </ul>
+        <a class="btn btn-secondaire" href="contact.html">Prendre rendez-vous</a>
+      </aside>
+    </div>
+  </section>

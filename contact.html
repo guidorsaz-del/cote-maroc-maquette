@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Contact et rendez-vous · Côté Maroc</title>
+<meta name="description" content="Écrivez à Sandra sur WhatsApp ou par e-mail, ou réservez un rendez-vous téléphonique de 30 minutes pour parler de votre voyage au Maroc.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=JetBrains+Mono:wght@400;500&family=Jost:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="" data-webhook="https://horizoniach.app.n8n.cloud/webhook/cote-maroc-demande" data-wa="Bonjour, je souhaite prendre contact au sujet d'un voyage au Maroc.">
+<div class="bandeau-maquette">Maquette de travail · octobre 2026</div>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="logo" href="index.html" aria-label="Côté Maroc, accueil">
+      <span class="logo-cote" aria-hidden="true"></span>
+      <span class="logo-maroc" aria-hidden="true"><span>m</span><span>a</span><span>r</span><span>o</span><span>c</span></span>
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="nav-principal">
+      <svg class="icone icone-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icone icone-fermer" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="nav" id="nav-principal" aria-label="Navigation principale">
+      <ul>
+        <li><a href="voyages.html">Nos voyages</a></li>
+        <li><a href="envies/index.html">Envies</a></li>
+        <li><a href="destinations/index.html">Destinations</a></li>
+        <li><a href="eclipse-2027.html">Éclipse 2027</a></li>
+        <li><a href="preparer-son-voyage.html">Préparer son voyage</a></li>
+        <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+        <li><a href="professionnels.html">Professionnels</a></li>
+        <li class="nav-cta"><a class="btn btn-principal" href="devis.html">Demander un devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="section section-sable">
+    <div class="conteneur">
+      <nav class="fil-ariane fil-ariane-clair" aria-label="Fil d'Ariane"><ol><li><a href="index.html">Accueil</a></li><li><span>Contact</span></li></ol></nav>
+      <span class="etiquette">Contact</span>
+      <h1>Parlons de votre voyage</h1>
+      <p class="sous-titre">Par WhatsApp, par e-mail ou lors d'un rendez-vous téléphonique de 30 minutes avec Sandra. Réponse sous 24 h.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur grille-cta">
+      <div>
+        <span class="etiquette">Rendez-vous</span>
+        <h2>Réserver un appel avec Sandra</h2>
+        <p class="sous-titre">Choisissez un créneau, Sandra vous appelle au numéro indiqué. Trente minutes pour poser le cadre de votre voyage.</p>
+        <div class="calendly-bloc" id="calendly" data-url="https://calendly.com/voyageos-support/rendez-vous-cote-maroc">
+          <p class="mentions">Le calendrier se charge ci-dessous. S'il ne s'affiche pas, <a href="https://calendly.com/voyageos-support/rendez-vous-cote-maroc">ouvrez-le dans un nouvel onglet</a>.</p>
+        </div>
+      </div>
+      <aside class="aparte">
+        <h3>Nous écrire</h3>
+        <ul>
+          <li>WhatsApp : <a href="https://wa.me/41798587217">+41 79 858 72 17</a></li>
+          <li>E-mail : <a href="mailto:sandra@cotevoyages.com">sandra@cotevoyages.com</a></li>
+        </ul>
+        <h3 style="margin-top:20px">Horaires</h3>
+        <ul>
+          <li>Lundi, mardi, jeudi, vendredi : 10 h à 12 h et 14 h à 17 h</li>
+          <li>Sur rendez-vous après 17 h</li>
+        </ul>
+        <a class="btn btn-principal" href="https://wa.me/41798587217?text=Bonjour%2C%20je%20souhaite%20prendre%20contact%20au%20sujet%20d%27un%20voyage%20au%20Maroc.">Écrire sur WhatsApp</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-sable" aria-labelledby="titre-message">
+    <div class="conteneur grille-cta">
+      <div>
+        <span class="etiquette">Un message</span>
+        <h2 id="titre-message">Ou laissez-nous un mot</h2>
+        <form class="formulaire" action="#" method="post" data-envoi="rapide" data-merci="merci.html">
+          <div class="ligne-champs">
+            <div class="champ"><label for="c-prenom">Prénom</label><input type="text" id="c-prenom" name="prenom" autocomplete="given-name" required></div>
+            <div class="champ"><label for="c-nom">Nom <span class="facultatif">(facultatif)</span></label><input type="text" id="c-nom" name="nom" autocomplete="family-name"></div>
+          </div>
+          <div class="ligne-champs">
+            <div class="champ"><label for="c-email">E-mail</label><input type="email" id="c-email" name="email" autocomplete="email" required></div>
+            <div class="champ"><label for="c-tel">Téléphone <span class="facultatif">(facultatif)</span></label><input type="tel" id="c-tel" name="tel" autocomplete="tel"></div>
+          </div>
+          <div class="champ"><label for="c-message">Votre message</label><textarea id="c-message" name="message" required></textarea></div>
+          <input type="text" name="site_web" tabindex="-1" autocomplete="off" class="piege" aria-hidden="true">
+          <div class="groupe-boutons">
+            <button class="btn btn-principal" type="submit">Envoyer</button>
+          </div>
+          <p class="message-envoi" hidden></p>
+          <p class="note-formulaire">Vos données servent uniquement à vous répondre.</p>
+        </form>
+      </div>
+      <aside class="aparte">
+        <h3>Pour un devis complet</h3>
+        <ul>
+          <li>Le formulaire en quatre étapes nous donne tout ce qu'il faut pour chiffrer votre voyage : dates, voyageurs, budget, envies.</li>
+        </ul>
+        <a class="btn btn-secondaire" href="devis.html">Demander un devis</a>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<a class="wa-flottant" href="https://wa.me/41798587217?text=Bonjour%2C%20je%20souhaite%20prendre%20contact%20au%20sujet%20d%27un%20voyage%20au%20Maroc." aria-label="Écrire à Côté Maroc sur WhatsApp">
+  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a3.5 3.5 0 0 1-2-2l1-1-1-2z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div class="pied-marque">
+        <a class="logo logo-blanc" href="index.html" aria-label="Côté Maroc, accueil">
+          <span class="logo-cote" aria-hidden="true"></span>
+          <span class="logo-maroc" aria-hidden="true"><span>m</span><span>a</span><span>r</span><span>o</span><span>c</span></span>
+        </a>
+        <p>Une marque de Côté Voyages, Martigny.</p>
+        <p>Tour-opérateur spécialiste du Maroc. Circuits en petit groupe, en privé et sur mesure.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:sandra@cotevoyages.com">sandra@cotevoyages.com</a></li>
+          <li><a href="https://wa.me/41798587217">WhatsApp +41 79 858 72 17</a></li>
+          <li><a href="contact.html">Prendre rendez-vous</a></li>
+          <li><a href="devis.html">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="voyages.html">Nos voyages</a></li>
+          <li><a href="envies/index.html">Envies</a></li>
+          <li><a href="destinations/index.html">Destinations</a></li>
+          <li><a href="eclipse-2027.html">Éclipse 2027</a></li>
+          <li><a href="preparer-son-voyage.html">Préparer son voyage</a></li>
+          <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="professionnels.html">Professionnels</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt. Cartes : OpenStreetMap.</div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+
+</body>
+</html>

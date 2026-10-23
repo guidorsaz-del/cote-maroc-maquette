@@ -1,0 +1,100 @@
+[
+  {
+    "slug": "desert-et-dunes",
+    "nom": "Désert et dunes",
+    "accroche": "Une nuit sous les étoiles, le silence des dunes",
+    "image": "merzouga-dunes.jpg",
+    "alt": "Dunes de sable du Sahara au coucher du soleil",
+    "textes": [
+      "Le Sahara marocain se mérite : on y arrive par le Moyen Atlas ou par les vallées du Sud, et la route fait partie du voyage. À Merzouga, les dunes de l'Erg Chebbi changent de couleur avec la lumière, du rose de l'aube à l'or du soir.",
+      "Nous l'intégrons de deux façons : une excursion en 4x4 dans les dunes au cœur d'un circuit accompagné, ou une nuit sous tente au bivouac, avec balade à dos de dromadaire, dans nos voyages privés. Le désert se visite d'octobre à avril de préférence, les nuits d'hiver y sont froides et les étés très chauds."
+    ],
+    "pourQui": "Pour celles et ceux qui veulent un moment hors du temps, en couple, en famille avec des enfants à partir de l'école primaire, ou entre amis.",
+    "voyages": ["nord-sud", "sur-les-routes-du-maroc"],
+    "destinations": ["merzouga", "ouarzazate-draa"]
+  },
+  {
+    "slug": "villes-imperiales",
+    "nom": "Villes impériales",
+    "accroche": "Fès, Meknès, Rabat, Marrakech : mille ans d'histoire",
+    "image": "jemaa-el-fna.jpg",
+    "alt": "Vue aérienne de la place Jemaa el-Fna le soir, à Marrakech",
+    "textes": [
+      "Les quatre capitales historiques du royaume racontent le Maroc mieux qu'aucun livre : la médina de Fès et ses artisans, Meknès et sa porte Bab Mansour, Rabat la raffinée, Marrakech la vibrante. Entre elles, Volubilis et ses ruines romaines, Casablanca et sa mosquée Hassan II.",
+      "C'est le voyage classique par excellence, celui que nous conseillons pour une première fois au Maroc. Il existe en circuit accompagné avec vols depuis Genève, en petit groupe à l'occasion de l'éclipse de 2027, ou en privé, à vos dates, avec votre guide et votre chauffeur."
+    ],
+    "pourQui": "Pour une première découverte du Maroc, pour les amateurs d'histoire et d'architecture, en couple, entre amis ou en famille.",
+    "voyages": ["villes-imperiales", "sur-les-routes-du-maroc", "eclipse-petit-groupe", "eclipse-prive"],
+    "destinations": ["fes", "meknes-volubilis", "rabat", "marrakech", "casablanca"]
+  },
+  {
+    "slug": "marrakech",
+    "nom": "Marrakech",
+    "accroche": "Quelques jours dans la ville ocre",
+    "image": "marrakech-souk.jpg",
+    "alt": "Étals de tissus colorés dans un souk de Marrakech",
+    "textes": [
+      "Marrakech se suffit à elle-même pour un long week-end ou une semaine : la place Jemaa el-Fna à la tombée de la nuit, les souks, la médersa Ben Youssef, le palais de la Bahia, le jardin Majorelle, et des terrasses pour regarder la ville vivre.",
+      "Nous l'organisons autour d'un hébergement qui compte autant que les visites : riad dans la médina, hôtel dans l'Hivernage ou la Palmeraie, ou grande villa privée avec piscine pour une famille ou un groupe d'amis. Un guide vous accompagne les premiers jours, puis la ville est à vous."
+    ],
+    "pourQui": "Pour une escapade courte, un anniversaire, un week-end prolongé ou une base avant l'Atlas ou la côte.",
+    "voyages": ["marrakech-prive", "villes-imperiales"],
+    "destinations": ["marrakech"]
+  },
+  {
+    "slug": "nord-et-chefchaouen",
+    "nom": "Nord et Chefchaouen",
+    "accroche": "Tanger, le Rif et la ville bleue",
+    "image": "chefchaouen.jpg",
+    "alt": "Ruelle aux façades bleues de Chefchaouen",
+    "textes": [
+      "Le Nord du Maroc est plus vert, plus frais et moins fréquenté que le Sud. Tanger regarde l'Espagne depuis le détroit, Chefchaouen cache ses ruelles bleues dans les montagnes du Rif, et la route vers Fès traverse des plaines agricoles et des villages authentiques.",
+      "Depuis le printemps 2026, un vol direct relie Genève à Tanger. C'est aussi par Tanger que passent nos deux voyages Éclipse 2027, la ville se trouvant sur la trajectoire de l'éclipse totale du 2 août."
+    ],
+    "pourQui": "Pour celles et ceux qui connaissent déjà Marrakech et veulent un autre Maroc, pour les photographes, pour l'été quand le Sud est trop chaud.",
+    "voyages": ["nord-sud", "eclipse-petit-groupe", "eclipse-prive"],
+    "destinations": ["tanger", "chefchaouen", "fes"]
+  },
+  {
+    "slug": "en-famille",
+    "nom": "En famille",
+    "accroche": "Dromadaires, kasbahs et piscine",
+    "image": "chameaux-famille.jpg",
+    "alt": "Balade à dos de dromadaire sur les dunes de Merzouga",
+    "textes": [
+      "Le Maroc est une destination facile en famille : trois heures de vol, pas de décalage horaire important, une cuisine qui plaît aux enfants et des paysages qui changent chaque jour. Les kasbahs ressemblent à des châteaux de sable, les dunes se dévalent, les souks sont une chasse au trésor.",
+      "Nous construisons les voyages en famille avec des étapes courtes, des hébergements avec piscine et des journées libres. Les grands trajets sont coupés, les visites de monuments sont dosées. Dites-nous l'âge des enfants, nous adaptons le rythme."
+    ],
+    "pourQui": "Pour les familles avec des enfants dès l'école primaire, pour les grands-parents qui voyagent avec leurs petits-enfants.",
+    "voyages": ["marrakech-prive", "villes-imperiales", "nord-sud"],
+    "destinations": ["marrakech", "merzouga", "ouarzazate-draa"]
+  },
+  {
+    "slug": "voyage-de-noces",
+    "nom": "Voyage de noces",
+    "accroche": "Riads, désert et hammam à deux",
+    "image": "riad.jpg",
+    "alt": "Patio d'un riad à Marrakech, avec zelliges et bassin",
+    "textes": [
+      "Le Maroc se prête aux voyages à deux : un riad avec patio à Marrakech, une nuit sous tente face aux dunes, un hammam dans la palmeraie, un dîner sur une terrasse de la médina. Les distances sont courtes et les contrastes forts, on change d'atmosphère en quelques heures de route.",
+      "Nous composons le voyage avec vous : la part de visites et la part de repos, le niveau d'hébergement, les attentions qui comptent. En privé, avec votre chauffeur, pour ne vous occuper de rien."
+    ],
+    "pourQui": "Pour un voyage de noces, un anniversaire de mariage, ou simplement un voyage à deux.",
+    "voyages": ["eclipse-prive", "marrakech-prive", "bien-etre-skoura"],
+    "destinations": ["marrakech", "merzouga", "skoura"]
+  },
+  {
+    "slug": "bien-etre",
+    "nom": "Bien-être",
+    "accroche": "Hammam, massages et palmeraie",
+    "image": "hammam.jpg",
+    "alt": "Hammam aux mosaïques dorées, bancs de marbre et lumière chaude",
+    "textes": [
+      "Le hammam et le gommage au savon noir font partie de la vie marocaine depuis des siècles. Nous les mettons au centre d'un séjour à part : sept nuits dans un écolodge de la palmeraie de Skoura, au pied de l'Atlas, avec six soins, des marches dans la palmeraie, du yoga et une cuisine faite avec les légumes du jardin.",
+      "Un séjour qui se suffit à lui-même, ou qui se combine avec quelques jours à Marrakech ou dans le désert."
+    ],
+    "pourQui": "Pour souffler, seul, entre amies ou en couple, sans programme imposé.",
+    "voyages": ["bien-etre-skoura", "marrakech-prive"],
+    "destinations": ["skoura", "marrakech"]
+  }
+]

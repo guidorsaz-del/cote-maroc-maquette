@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=JetBrains+Mono:wght@400;500&family=Jost:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{PREFIX}}css/style.css">
+{{HEAD_EXTRA}}
+</head>
+<body class="{{BODY_CLASS}}"{{BODY_DATA}}>
+<div class="bandeau-maquette">Maquette de travail · octobre 2026</div>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="logo" href="{{PREFIX}}index.html" aria-label="Côté Maroc, accueil">
+      <span class="logo-cote" aria-hidden="true"></span>
+      <span class="logo-maroc" aria-hidden="true"><span>m</span><span>a</span><span>r</span><span>o</span><span>c</span></span>
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="nav-principal">
+      <svg class="icone icone-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icone icone-fermer" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="nav" id="nav-principal" aria-label="Navigation principale">
+      <ul>
+{{NAV}}
+        <li class="nav-cta"><a class="btn btn-principal" href="{{PREFIX}}devis.html">Demander un devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+{{MAIN}}
+</main>
+
+<a class="wa-flottant" href="{{WA_LIEN}}" aria-label="Écrire à Côté Maroc sur WhatsApp">
+  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a3.5 3.5 0 0 1-2-2l1-1-1-2z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div class="pied-marque">
+        <a class="logo logo-blanc" href="{{PREFIX}}index.html" aria-label="Côté Maroc, accueil">
+          <span class="logo-cote" aria-hidden="true"></span>
+          <span class="logo-maroc" aria-hidden="true"><span>m</span><span>a</span><span>r</span><span>o</span><span>c</span></span>
+        </a>
+        <p>Une marque de Côté Voyages, Martigny.</p>
+        <p>Tour-opérateur spécialiste du Maroc. Circuits en petit groupe, en privé et sur mesure.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li><a href="{{WA_LIEN_SIMPLE}}">WhatsApp {{WA_AFFICHE}}</a></li>
+          <li><a href="{{PREFIX}}contact.html">Prendre rendez-vous</a></li>
+          <li><a href="{{PREFIX}}devis.html">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+{{PIED_PAGES}}
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt. Cartes : OpenStreetMap.</div>
+  </div>
+</footer>
+
+<script src="{{PREFIX}}js/site.js"></script>
+{{SCRIPTS_EXTRA}}
+</body>
+</html>

@@ -1,0 +1,143 @@
+[
+  {
+    "slug": "marrakech",
+    "nom": "Marrakech",
+    "accroche": "La ville ocre",
+    "image": "marrakech-koutoubia.jpg",
+    "alt": "La Koutoubia à Marrakech au coucher du soleil, la place animée au premier plan",
+    "lat": 31.6295, "lng": -7.9811,
+    "textes": [
+      "Entre tradition et modernité, Marrakech est la promesse de sensations incomparables. En flânant sur la place Jemaa el-Fna et à travers les souks aux couleurs vives et aux arômes orientaux, la ville rouge répond d'un claquement de doigts à votre envie de dépaysement. Balades en calèche, terrasses ensoleillées, artistes de rue et autres activités diurnes et nocturnes rythmeront votre séjour au Maroc.",
+      "La place Jemaa el-Fna, au cœur de Marrakech, est un lieu animé avec des conteurs, des musiciens, des charmeurs de serpents et des stands de nourriture proposant des plats traditionnels marocains. Les lumières vacillantes créent une atmosphère magique où le passé et le présent se marient harmonieusement. La médersa Ben Youssef, fondée au XIVe siècle, est un exemple d'architecture islamique avec des zelliges colorés, des stucs ciselés et des menuiseries sculptées.",
+      "Les jardins Majorelle sont une oasis de tranquillité connue pour leur couleur bleu cobalt vibrante. Ils proposent une collection de plantes exotiques, un musée berbère et une expérience sensorielle unique avec des fontaines, des oiseaux et une atmosphère de paix."
+    ],
+    "aVoir": ["Place Jemaa el-Fna", "Médersa Ben Youssef", "Palais de la Bahia", "Jardin Majorelle et musée YSL", "Les souks de la médina", "La Koutoubia", "Les tombeaux saadiens"],
+    "vols": "Vols directs depuis Genève, environ 3 heures."
+  },
+  {
+    "slug": "fes",
+    "nom": "Fès",
+    "accroche": "Gardienne de l'histoire marocaine",
+    "image": "fes-medina.jpg",
+    "alt": "Vue sur les toits de la médina de Fès",
+    "lat": 34.0181, "lng": -5.0078,
+    "textes": [
+      "Fès est la capitale spirituelle du Maroc, connue pour ses souks animés, ses madrassas historiques et ses majestueuses mosquées. La médina de Fès, un labyrinthe de rues étroites et sinueuses, est un trésor vivant du patrimoine culturel et architectural. Il existe des artisans qui travaillent le cuir, le cuivre et la céramique avec des techniques transmises de génération en génération.",
+      "Chaque coin révèle une nouvelle découverte, qu'il s'agisse d'une fontaine ornée de mosaïques colorées ou d'une porte en bois finement sculptée. Les médersas Bou Inania et Attarine sont deux joyaux de l'architecture traditionnelle islamique."
+    ],
+    "aVoir": ["La médina, patrimoine mondial de l'UNESCO", "Médersa Bou Inania", "Médersa Attarine", "Les tanneries", "Les souks d'artisans"],
+    "vols": ""
+  },
+  {
+    "slug": "casablanca",
+    "nom": "Casablanca",
+    "accroche": "La modernité rencontre le charme de l'ancien",
+    "image": "casablanca-hassan-ii.jpg",
+    "alt": "La mosquée Hassan II à Casablanca sous un ciel bleu",
+    "lat": 33.5731, "lng": -7.5898,
+    "textes": [
+      "Casablanca allie histoire, culture et modernité. C'est un centre économique où se conjuguent tradition et vie contemporaine, comme en témoigne son architecture. La mosquée Hassan II symbolise le patrimoine de la ville. L'atmosphère vibrante de Casablanca, sa population diversifiée, ses marchés et ses vues côtières offrent une expérience enchanteresse."
+    ],
+    "aVoir": ["Mosquée Hassan II, l'une des plus grandes au monde", "Le quartier des Habous", "Le front de mer"],
+    "vols": "Aéroport international, point d'arrivée de plusieurs de nos voyages."
+  },
+  {
+    "slug": "rabat",
+    "nom": "Rabat",
+    "accroche": "Une capitale moderne avec une histoire profonde",
+    "image": "rabat-tour-hassan.jpg",
+    "alt": "La tour Hassan à Rabat, entourée de palmiers, au crépuscule",
+    "lat": 34.0209, "lng": -6.8416,
+    "textes": [
+      "Rabat, la capitale du Maroc, allie histoire et modernité à travers son ancienne médina, son architecture coloniale et son littoral animé. Les attractions de la ville comprennent des jardins luxuriants, des musées et des galeries, ce qui en fait un centre culturel et politique.",
+      "Les vestiges imposants de la Chellah, une nécropole médiévale nichée dans son écrin de verdure, comptent parmi les visites marquantes de la ville."
+    ],
+    "aVoir": ["La Chellah", "La médina", "La tour Hassan", "La kasbah des Oudayas"],
+    "vols": ""
+  },
+  {
+    "slug": "meknes-volubilis",
+    "nom": "Meknès et Volubilis",
+    "accroche": "Un musée à ciel ouvert",
+    "image": "volubilis.jpg",
+    "alt": "Les ruines romaines de Volubilis sous un ciel dramatique",
+    "lat": 33.9837, "lng": -5.551,
+    "textes": [
+      "La médina de Meknès et les vestiges du palais royal lui ont valu d'être inscrite au patrimoine mondial de l'UNESCO. Sur la place El Hédime, Bab Mansour est la porte d'entrée de la médina. C'est l'un des chefs-d'œuvre de l'art hispano-mauresque. N'oubliez pas de visiter les écuries royales et les greniers du sultan Moulay Ismail.",
+      "Au nord de Meknès se trouve le plus grand site archéologique romain du Maroc : Volubilis. Arc de triomphe, capitole, maison de Bacchus, tout témoigne de la splendeur qu'a connue la ville et de son poids économique et politique."
+    ],
+    "aVoir": ["Bab Mansour et la place El Hédime", "Les écuries royales et les greniers de Moulay Ismail", "Le site romain de Volubilis"],
+    "vols": ""
+  },
+  {
+    "slug": "chefchaouen",
+    "nom": "Chefchaouen",
+    "accroche": "Le rêve bleu",
+    "image": "chefchaouen.jpg",
+    "alt": "Ruelle aux façades bleues de Chefchaouen",
+    "lat": 35.1688, "lng": -5.2636,
+    "textes": [
+      "Chefchaouen avec ses maisons bleues offre une atmosphère relaxante et onirique. Les rues fleuries et les boutiques d'artisanat vous invitent à la découverte. Les arômes d'épices et les plats traditionnels promettent une expérience culinaire mémorable. Les habitants accueillants partagent fièrement leur culture. Chefchaouen est un joyau caché au cœur des montagnes du Rif, où la beauté et le temps semblent figés."
+    ],
+    "aVoir": ["La médina bleue", "La place Outa el-Hammam", "Les montagnes du Rif"],
+    "vols": ""
+  },
+  {
+    "slug": "tanger",
+    "nom": "Tanger",
+    "accroche": "Entre Atlantique et Méditerranée",
+    "image": "tanger-port.jpg",
+    "alt": "Le port de Tanger, la ville et la mer en arrière-plan",
+    "lat": 35.7595, "lng": -5.834,
+    "textes": [
+      "Au nord du Maroc, la ville de Tanger invite les voyageurs. Sur ses côtes, là où convergent les eaux de la Méditerranée et de l'Atlantique, vous découvrirez une ville authentique bercée par diverses influences.",
+      "Tanger mélange cultures et traditions avec ses rues pittoresques, ses marchés parfumés, sa promenade animée et sa vie nocturne éclectique. Les influences françaises, espagnoles et arabes créent une atmosphère unique qui attire les artistes et les écrivains. Au crépuscule, la médina s'illumine, révélant ses secrets sous un ciel étoilé.",
+      "Le 2 août 2027, Tanger se trouve sur la trajectoire de l'éclipse solaire totale. Nos deux voyages Éclipse y passent cette journée."
+    ],
+    "aVoir": ["La médina et la kasbah", "Le cap Spartel et les grottes d'Hercule", "La promenade du front de mer"],
+    "vols": "Vol direct Genève - Tanger avec easyJet depuis le printemps 2026."
+  },
+  {
+    "slug": "merzouga",
+    "nom": "Merzouga et le Sahara",
+    "accroche": "La légende",
+    "image": "merzouga-dunes.jpg",
+    "alt": "Dunes de sable du Sahara au coucher du soleil",
+    "lat": 31.0801, "lng": -4.0135,
+    "textes": [
+      "Merzouga, dans le Sahara marocain, offre des paysages spectaculaires avec des dunes de sable doré, des activités d'aventure telles que des balades en dromadaire et une immersion dans la culture nomade berbère. Nuits étoilées et camping traditionnel offrent une expérience authentique et inoubliable.",
+      "Selon le voyage, on y arrive par le Moyen Atlas, avec des haltes à Ifrane, Azrou et Midelt, pour une excursion en 4x4 dans les dunes ou une nuit sous tente au bivouac."
+    ],
+    "aVoir": ["Les dunes de l'Erg Chebbi", "Une nuit sous tente au bivouac", "Le lever du soleil sur les dunes", "Balade à dos de dromadaire"],
+    "vols": ""
+  },
+  {
+    "slug": "ouarzazate-draa",
+    "nom": "Ouarzazate, Aït Ben Haddou et la vallée du Drâa",
+    "accroche": "Kasbahs et palmeraies",
+    "image": "ait-ben-haddou.jpg",
+    "alt": "Le ksar d'Aït Ben Haddou, village fortifié en terre au pied de l'Atlas",
+    "lat": 30.9189, "lng": -6.8934,
+    "textes": [
+      "La kasbah de Taourirt, tel un phénix d'argile, éblouit par son éclat berbère. Les arabesques et sculptures qui ornent ses murs témoignent d'un savoir-faire ancien. Cours intérieures, jardins secrets, tapis moelleux et mosaïques racontent un patrimoine culturel extravagant.",
+      "Le célèbre village d'Aït Ben Haddou, classé au patrimoine mondial de l'UNESCO, offre une vue imprenable sur la vallée de l'Ounila. À Ouarzazate, le musée du Cinéma plonge dans l'univers cinématographique à travers une riche collection de décors, costumes et accessoires.",
+      "La vallée du Drâa est un joyau naturel de 200 km, avec des palmeraies luxuriantes, des montagnes majestueuses, des villages berbères pittoresques, des marchés animés et des sentiers de randonnée variés."
+    ],
+    "aVoir": ["Le ksar d'Aït Ben Haddou", "La kasbah de Taourirt", "Le musée du Cinéma", "Les gorges du Todra et la vallée du Dadès", "La vallée du Drâa", "Le col du Tizi n'Tichka, 2260 m"],
+    "vols": ""
+  },
+  {
+    "slug": "skoura",
+    "nom": "La palmeraie de Skoura",
+    "accroche": "Au pied de l'Atlas",
+    "image": "oasis-tinghir.jpg",
+    "alt": "Oasis au pied de l'Atlas, palmeraie et kasbahs en terre",
+    "lat": 31.063, "lng": -6.556,
+    "textes": [
+      "À une quarantaine de kilomètres d'Ouarzazate, la palmeraie de Skoura déroule ses kasbahs en terre et ses jardins au pied de l'Atlas. C'est là que se trouve l'écolodge de notre séjour bien-être, une ferme d'hôtes éco-responsable au cœur de la verdure.",
+      "Marches dans la palmeraie, souk de Skoura ou de Toundoute, kasbah d'Amredhil, thé chez l'habitant : la vie authentique des oasis du Maroc, loin de l'agitation des grandes villes touristiques."
+    ],
+    "aVoir": ["La kasbah d'Amredhil", "Le souk de Skoura", "L'oued Dadès à Sidi Flah", "La palmeraie à vélo ou à pied"],
+    "vols": ""
+  }
+]

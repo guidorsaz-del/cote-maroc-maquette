@@ -10,9 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=JetBrains+Mono:wght@400;500&family=Jost:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
-<div class="bandeau-maquette">Maquette de travail · octobre 2026 · les formulaires n'envoient rien</div>
+<body class="" data-webhook="https://horizoniach.app.n8n.cloud/webhook/cote-maroc-demande" data-wa="Bonjour, je représente une agence et je m'intéresse à vos circuits au Maroc.">
+<div class="bandeau-maquette">Maquette de travail · octobre 2026</div>
 
 <header class="entete">
   <div class="conteneur">
@@ -27,11 +28,12 @@
     </button>
     <nav class="nav" id="nav-principal" aria-label="Navigation principale">
       <ul>
-        <li><a href="index.html#circuits">Nos voyages</a></li>
-        <li><a href="index.html#envies">Envies</a></li>
-        <li><a href="index.html#eclipse">Éclipse 2027</a></li>
-        <li><a href="index.html#quand-partir">Préparer son voyage</a></li>
-        <li><a href="index.html#equipe">Qui sommes-nous</a></li>
+        <li><a href="voyages.html">Nos voyages</a></li>
+        <li><a href="envies/index.html">Envies</a></li>
+        <li><a href="destinations/index.html">Destinations</a></li>
+        <li><a href="eclipse-2027.html">Éclipse 2027</a></li>
+        <li><a href="preparer-son-voyage.html">Préparer son voyage</a></li>
+        <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
         <li><a href="professionnels.html" aria-current="page">Professionnels</a></li>
         <li class="nav-cta"><a class="btn btn-principal" href="devis.html">Demander un devis</a></li>
       </ul>
@@ -40,7 +42,7 @@
 </header>
 
 <main>
-  <section class="banniere banniere-fiche" aria-labelledby="titre-pro">
+<section class="banniere banniere-fiche" aria-labelledby="titre-pro">
     <img src="img/caravane.jpg" alt="Caravane de dromadaires traversant les dunes près de Zagora" fetchpriority="high">
     <div class="conteneur">
       <span class="etiquette">Professionnels · Tour-opérateurs et agences</span>
@@ -110,9 +112,9 @@
         <span class="etiquette">Contact professionnels</span>
         <h2 id="titre-acces">Parlons de votre programmation</h2>
         <p class="sous-titre">Dites-nous qui vous êtes et ce qui vous intéresse. Nous vous répondons sous 24 h, avec les programmes et les tarifs nets.</p>
-        <form class="formulaire" action="#" method="post">
+        <form class="formulaire" action="#" method="post" data-envoi="pro" data-merci="merci.html">
           <div class="ligne-champs">
-            <div class="champ"><label for="agence">Nom de l'agence ou du tour-opérateur</label><input type="text" id="agence" name="agence" autocomplete="organization"></div>
+            <div class="champ"><label for="agence">Nom de l'agence ou du tour-opérateur</label><input type="text" id="agence" name="agence" autocomplete="organization" required></div>
             <div class="champ"><label for="pays">Pays</label>
               <select id="pays" name="pays">
                 <option>Suisse</option>
@@ -123,17 +125,19 @@
             </div>
           </div>
           <div class="ligne-champs">
-            <div class="champ"><label for="pro-nom">Votre nom</label><input type="text" id="pro-nom" name="nom" autocomplete="name"></div>
+            <div class="champ"><label for="pro-nom">Votre nom</label><input type="text" id="pro-nom" name="nom" autocomplete="name" required></div>
             <div class="champ"><label for="pro-fonction">Fonction <span class="facultatif">(facultatif)</span></label><input type="text" id="pro-fonction" name="fonction" autocomplete="organization-title"></div>
           </div>
           <div class="ligne-champs">
-            <div class="champ"><label for="pro-email">E-mail professionnel</label><input type="email" id="pro-email" name="email" autocomplete="email"></div>
+            <div class="champ"><label for="pro-email">E-mail professionnel</label><input type="email" id="pro-email" name="email" autocomplete="email" required></div>
             <div class="champ"><label for="pro-tel">Téléphone <span class="facultatif">(facultatif)</span></label><input type="tel" id="pro-tel" name="tel" autocomplete="tel"></div>
           </div>
           <div class="champ"><label for="pro-message">Ce qui vous intéresse <span class="facultatif">(facultatif)</span></label><textarea id="pro-message" name="message" placeholder="Séries, circuits privés, une destination ou une période en particulier"></textarea></div>
+          <input type="text" name="site_web" tabindex="-1" autocomplete="off" class="piege" aria-hidden="true">
           <div class="groupe-boutons">
-            <button class="btn btn-principal" type="button">Envoyer ma demande</button>
+            <button class="btn btn-principal" type="submit">Envoyer ma demande</button>
           </div>
+          <p class="message-envoi" hidden></p>
           <p class="note-formulaire">Vos données servent uniquement à traiter votre demande.</p>
         </form>
       </div>
@@ -148,7 +152,13 @@
       </aside>
     </div>
   </section>
+
 </main>
+
+<a class="wa-flottant" href="https://wa.me/41798587217?text=Bonjour%2C%20je%20repr%C3%A9sente%20une%20agence%20et%20je%20m%27int%C3%A9resse%20%C3%A0%20vos%20circuits%20au%20Maroc." aria-label="Écrire à Côté Maroc sur WhatsApp">
+  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a3.5 3.5 0 0 1-2-2l1-1-1-2z"/></svg>
+  <span>WhatsApp</span>
+</a>
 
 <footer class="pied">
   <div class="conteneur">
@@ -166,23 +176,29 @@
         <ul>
           <li><a href="mailto:sandra@cotevoyages.com">sandra@cotevoyages.com</a></li>
           <li><a href="https://wa.me/41798587217">WhatsApp +41 79 858 72 17</a></li>
+          <li><a href="contact.html">Prendre rendez-vous</a></li>
           <li><a href="devis.html">Demander un devis</a></li>
         </ul>
       </div>
       <div>
         <h3>Pages</h3>
         <ul>
-          <li><a href="index.html#circuits">Nos voyages</a></li>
-          <li><a href="index.html#envies">Envies</a></li>
-          <li><a href="index.html#eclipse">Éclipse 2027</a></li>
+          <li><a href="voyages.html">Nos voyages</a></li>
+          <li><a href="envies/index.html">Envies</a></li>
+          <li><a href="destinations/index.html">Destinations</a></li>
+          <li><a href="eclipse-2027.html">Éclipse 2027</a></li>
+          <li><a href="preparer-son-voyage.html">Préparer son voyage</a></li>
+          <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="professionnels.html">Professionnels</a></li>
         </ul>
       </div>
     </div>
-    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt.</div>
+    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt. Cartes : OpenStreetMap.</div>
   </div>
 </footer>
 
 <script src="js/site.js"></script>
+
 </body>
 </html>

@@ -10,9 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=JetBrains+Mono:wght@400;500&family=Jost:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
-<div class="bandeau-maquette">Maquette de travail · octobre 2026 · les formulaires n'envoient rien</div>
+<body class="" data-webhook="https://horizoniach.app.n8n.cloud/webhook/cote-maroc-demande" data-wa="Bonjour, je souhaite des renseignements sur un voyage au Maroc.">
+<div class="bandeau-maquette">Maquette de travail · octobre 2026</div>
 
 <header class="entete">
   <div class="conteneur">
@@ -27,11 +28,12 @@
     </button>
     <nav class="nav" id="nav-principal" aria-label="Navigation principale">
       <ul>
-        <li><a href="#circuits">Nos voyages</a></li>
-        <li><a href="#envies">Envies</a></li>
-        <li><a href="#eclipse">Éclipse 2027</a></li>
-        <li><a href="#quand-partir">Préparer son voyage</a></li>
-        <li><a href="#equipe">Qui sommes-nous</a></li>
+        <li><a href="voyages.html">Nos voyages</a></li>
+        <li><a href="envies/index.html">Envies</a></li>
+        <li><a href="destinations/index.html">Destinations</a></li>
+        <li><a href="eclipse-2027.html">Éclipse 2027</a></li>
+        <li><a href="preparer-son-voyage.html">Préparer son voyage</a></li>
+        <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
         <li><a href="professionnels.html">Professionnels</a></li>
         <li class="nav-cta"><a class="btn btn-principal" href="devis.html">Demander un devis</a></li>
       </ul>
@@ -40,7 +42,7 @@
 </header>
 
 <main>
-  <section class="banniere" aria-labelledby="titre-principal">
+<section class="banniere" aria-labelledby="titre-principal">
     <img src="img/hero-dunes.jpg" alt="Lever de soleil sur les dunes de Merzouga, au Maroc" fetchpriority="high">
     <div class="conteneur">
       <span class="etiquette">Tour opérateur · Martigny</span>
@@ -48,10 +50,7 @@
       <p class="sous-titre">Nous concevons nos propres circuits au Maroc avec une équipe sur place, et nous les organisons depuis le Valais. En petit groupe, en privé ou entièrement sur mesure.</p>
       <div class="groupe-boutons">
         <a class="btn btn-principal" href="devis.html">Demander un devis</a>
-        <a class="btn btn-contour-clair" href="https://wa.me/41798587217">
-          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a3.5 3.5 0 0 1-2-2l1-1-1-2z"/></svg>
-          Parler à un spécialiste
-        </a>
+        <a class="btn btn-contour-clair" href="voyages.html">Voir nos voyages</a>
       </div>
     </div>
   </section>
@@ -60,8 +59,8 @@
     <div class="conteneur">
       <ul>
         <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span>Garantie des fonds clients</span></li>
-        <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 4.5"/></svg><span>Un conseiller en Suisse, une équipe au Maroc</span></li>
-        <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 2 7a2 2 0 0 1 2-2z"/></svg><span>Assistance sur place pendant le voyage</span></li>
+        <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 4.5"/></svg><span>Une conseillère en Suisse, une équipe au Maroc</span></li>
+        <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 2 7a2 2 0 0 1 2-2z"/></svg><span>Réponse sous 24 h, offre sous 7 jours</span></li>
         <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg><span>Devis gratuit et sans engagement</span></li>
       </ul>
     </div>
@@ -70,21 +69,21 @@
   <section class="section" id="circuits" aria-labelledby="titre-circuits">
     <div class="conteneur">
       <div class="entete-section">
-        <span class="etiquette">Nos circuits</span>
-        <h2 id="titre-circuits">Sept voyages conçus par nos soins</h2>
-        <p class="sous-titre">Des itinéraires que nous avons construits et que nous connaissons : en groupe accompagné, en petit groupe, en privé, ou en séjour.</p>
+        <span class="etiquette">Nos voyages</span>
+        <h2 id="titre-circuits">Des voyages conçus par nos soins</h2>
+        <p class="sous-titre">Des itinéraires que nous avons construits et que nous connaissons : en groupe accompagné, en petit groupe, en privé ou en séjour.</p>
       </div>
       <div class="grille-cartes">
-        <article class="carte">
+        <article class="carte" data-type="accompagne" data-jours="10" data-budget="2" data-mois="3,4,10">
           <img src="img/ait-ben-haddou.jpg" alt="Le ksar d'Aït Ben Haddou, village fortifié en terre au pied de l'Atlas" loading="lazy">
           <div class="carte-corps">
             <span class="etiquette">Circuit accompagné</span>
             <h3><a href="circuits/sur-les-routes-du-maroc.html">Sur les routes du Maroc</a></h3>
             <p>Marrakech, Casablanca, Rabat, Fès, le Sahara et l'Atlas, avec guide accompagnateur et vols depuis Genève.</p>
-            <div class="carte-meta"><span>10 jours · <strong>Fr. 2'295.-</strong></span><a class="lien-fleche" href="circuits/sur-les-routes-du-maroc.html">Découvrir</a></div>
+            <div class="carte-meta"><span>10 jours · <strong>Fr. 2'295.-</strong> par personne</span><a class="lien-fleche" href="circuits/sur-les-routes-du-maroc.html">Découvrir</a></div>
           </div>
         </article>
-        <article class="carte">
+        <article class="carte" data-type="prive" data-jours="8" data-budget="demande" data-mois="tous">
           <img src="img/fes-medina.jpg" alt="Vue sur les toits de la médina de Fès" loading="lazy">
           <div class="carte-corps">
             <span class="etiquette">Voyage privé</span>
@@ -93,7 +92,7 @@
             <div class="carte-meta"><span>8 jours · <strong>Prix sur demande</strong></span><a class="lien-fleche" href="circuits/villes-imperiales.html">Découvrir</a></div>
           </div>
         </article>
-        <article class="carte">
+        <article class="carte" data-type="prive" data-jours="12" data-budget="demande" data-mois="tous">
           <img src="img/caravane.jpg" alt="Caravane de dromadaires traversant les dunes près de Zagora" loading="lazy">
           <div class="carte-corps">
             <span class="etiquette">Voyage privé</span>
@@ -102,52 +101,17 @@
             <div class="carte-meta"><span>12 jours · <strong>Prix sur demande</strong></span><a class="lien-fleche" href="circuits/nord-sud.html">Découvrir</a></div>
           </div>
         </article>
-        <article class="carte">
+        <article class="carte" data-type="petit-groupe" data-jours="10" data-budget="2" data-mois="7,8">
           <img src="img/eclipse.jpg" alt="Éclipse solaire totale, la couronne du soleil autour de la lune" loading="lazy">
           <div class="carte-corps">
             <span class="etiquette">Petit groupe · max. 16 personnes</span>
             <h3><a href="circuits/eclipse-petit-groupe.html">Éclipse solaire et trésors impériaux</a></h3>
             <p>Les cités impériales, Chefchaouen et l'éclipse totale du 2 août 2027 vécue depuis Tanger.</p>
-            <div class="carte-meta"><span>10 jours · dès <strong>CHF 1'690.-</strong></span><a class="lien-fleche" href="circuits/eclipse-petit-groupe.html">Découvrir</a></div>
-          </div>
-        </article>
-        <article class="carte">
-          <img src="img/tanger.jpg" alt="Façade historique à Tanger sous un ciel bleu" loading="lazy">
-          <div class="carte-corps">
-            <span class="etiquette">Circuit en privé</span>
-            <h3><a href="circuits/eclipse-prive.html">Éclipse solaire et trésors impériaux, en privé</a></h3>
-            <p>Le même voyage en véhicule privé, à votre rythme, de Marrakech à Tanger.</p>
-            <div class="carte-meta"><span>9 jours · dès <strong>CHF 2'690.-</strong></span><a class="lien-fleche" href="circuits/eclipse-prive.html">Découvrir</a></div>
-          </div>
-        </article>
-        <article class="carte">
-          <img src="img/villa-piscine.jpg" alt="Patio marocain avec piscine, arcades en pisé et palmiers" loading="lazy">
-          <div class="carte-corps">
-            <span class="etiquette">Séjour privé</span>
-            <h3><a href="circuits/marrakech-prive.html">Marrakech privé</a></h3>
-            <p>Grande villa privée de luxe, un guide pour la médina, les jardins et les souks, et du temps pour vous.</p>
-            <div class="carte-meta"><span>5 jours · <strong>Prix sur demande</strong></span><a class="lien-fleche" href="circuits/marrakech-prive.html">Découvrir</a></div>
-          </div>
-        </article>
-        <article class="carte">
-          <img src="img/hammam.jpg" alt="Hammam aux mosaïques dorées, bancs de marbre et lumière chaude" loading="lazy">
-          <div class="carte-corps">
-            <span class="etiquette">Séjour bien-être</span>
-            <h3><a href="circuits/bien-etre-skoura.html">Bien-être dans la palmeraie de Skoura</a></h3>
-            <p>Sept nuits dans un écolodge au pied de l'Atlas : hammam, massages, marches dans la palmeraie et cuisine du jardin.</p>
-            <div class="carte-meta"><span>7 nuits · dès <strong>CHF 1'200.-</strong> hors vol</span><a class="lien-fleche" href="circuits/bien-etre-skoura.html">Découvrir</a></div>
-          </div>
-        </article>
-        <article class="carte carte-sur-mesure">
-          <div class="carte-corps">
-            <span class="etiquette">Sur mesure</span>
-            <h3>Votre voyage, de A à Z</h3>
-            <p>Un itinéraire construit autour de vos envies, de vos dates et de votre budget, avec notre équipe au Maroc.</p>
-            <div class="carte-meta"><span><strong>Prix sur demande</strong></span><a class="lien-fleche" href="devis.html">Demander un devis</a></div>
+            <div class="carte-meta"><span>10 jours · dès <strong>CHF 1'690.-</strong> par personne</span><a class="lien-fleche" href="circuits/eclipse-petit-groupe.html">Découvrir</a></div>
           </div>
         </article>
       </div>
-      <p class="mentions">Sur les routes du Maroc : prix par personne en chambre double, vols Genève - Marrakech inclus. Circuits Éclipse : exemple de prix, base 2 participants, hors vols internationaux. Séjour bien-être : prix par personne, hors vol. Les voyages privés sont établis sur devis. Le détail de ce que chaque prix comprend figure sur la fiche du voyage.</p>
+      <p style="margin-top:24px"><a class="btn btn-secondaire" href="voyages.html">Voir les sept voyages et le sur mesure</a></p>
     </div>
   </section>
 
@@ -156,15 +120,16 @@
       <div class="entete-section">
         <span class="etiquette">Envies</span>
         <h2 id="titre-envies">Par où commencer ?</h2>
-        <p class="sous-titre">Dites-nous ce qui vous attire, nous construisons le voyage autour. Chaque envie se décline en privé ou sur mesure.</p>
+        <p class="sous-titre">Dites-nous ce qui vous attire, nous construisons le voyage autour.</p>
       </div>
-      <div class="grille-envies">
-        <a class="envie" href="circuits/nord-sud.html"><img src="img/merzouga-dunes.jpg" alt="Dunes de sable du Sahara au coucher du soleil" loading="lazy"><div class="envie-texte"><strong>Désert et dunes</strong><span>Nuit sous tente à Merzouga</span></div></a>
-        <a class="envie" href="circuits/villes-imperiales.html"><img src="img/jemaa-el-fna.jpg" alt="Vue aérienne de la place Jemaa el-Fna le soir, à Marrakech" loading="lazy"><div class="envie-texte"><strong>Villes impériales</strong><span>Voyage privé de 8 jours</span></div></a>
-        <a class="envie" href="circuits/marrakech-prive.html"><img src="img/marrakech-souk.jpg" alt="Étals de tissus colorés dans un souk de Marrakech" loading="lazy"><div class="envie-texte"><strong>Marrakech</strong><span>Séjour en villa privée</span></div></a>
-        <a class="envie" href="circuits/nord-sud.html"><img src="img/chefchaouen.jpg" alt="Ruelle aux façades bleues de Chefchaouen" loading="lazy"><div class="envie-texte"><strong>Nord et Chefchaouen</strong><span>Du Nord au Sud, 12 jours</span></div></a>
-        <a class="envie" href="devis.html"><img src="img/chameaux-famille.jpg" alt="Balade à dos de dromadaire sur les dunes de Merzouga" loading="lazy"><div class="envie-texte"><strong>En famille</strong><span>Sur mesure, prix sur demande</span></div></a>
-        <a class="envie" href="devis.html"><img src="img/riad.jpg" alt="Patio d'un riad à Marrakech, avec zelliges et bassin" loading="lazy"><div class="envie-texte"><strong>Voyage de noces</strong><span>Sur mesure, prix sur demande</span></div></a>
+      <div class="grille-envies grille-envies-4">
+        <a class="envie" href="envies/desert-et-dunes.html"><img src="img/merzouga-dunes.jpg" alt="Dunes de sable du Sahara au coucher du soleil" loading="lazy"><div class="envie-texte"><strong>Désert et dunes</strong><span>Une nuit sous les étoiles, le silence des dunes</span></div></a>
+        <a class="envie" href="envies/villes-imperiales.html"><img src="img/jemaa-el-fna.jpg" alt="Vue aérienne de la place Jemaa el-Fna le soir, à Marrakech" loading="lazy"><div class="envie-texte"><strong>Villes impériales</strong><span>Fès, Meknès, Rabat, Marrakech : mille ans d'histoire</span></div></a>
+        <a class="envie" href="envies/marrakech.html"><img src="img/marrakech-souk.jpg" alt="Étals de tissus colorés dans un souk de Marrakech" loading="lazy"><div class="envie-texte"><strong>Marrakech</strong><span>Quelques jours dans la ville ocre</span></div></a>
+        <a class="envie" href="envies/nord-et-chefchaouen.html"><img src="img/chefchaouen.jpg" alt="Ruelle aux façades bleues de Chefchaouen" loading="lazy"><div class="envie-texte"><strong>Nord et Chefchaouen</strong><span>Tanger, le Rif et la ville bleue</span></div></a>
+        <a class="envie" href="envies/en-famille.html"><img src="img/chameaux-famille.jpg" alt="Balade à dos de dromadaire sur les dunes de Merzouga" loading="lazy"><div class="envie-texte"><strong>En famille</strong><span>Dromadaires, kasbahs et piscine</span></div></a>
+        <a class="envie" href="envies/voyage-de-noces.html"><img src="img/riad.jpg" alt="Patio d'un riad à Marrakech, avec zelliges et bassin" loading="lazy"><div class="envie-texte"><strong>Voyage de noces</strong><span>Riads, désert et hammam à deux</span></div></a>
+        <a class="envie" href="envies/bien-etre.html"><img src="img/hammam.jpg" alt="Hammam aux mosaïques dorées, bancs de marbre et lumière chaude" loading="lazy"><div class="envie-texte"><strong>Bien-être</strong><span>Hammam, massages et palmeraie</span></div></a>
       </div>
     </div>
   </section>
@@ -174,18 +139,15 @@
       <div>
         <span class="etiquette sur-sombre">2 août 2027</span>
         <h2 id="titre-eclipse">Éclipse totale du 2 août 2027 à Tanger</h2>
-        <p>Tanger se trouve sur la trajectoire de l'éclipse totale. Nous avons conçu deux formules pour la vivre depuis la ville du détroit, tout en découvrant les cités impériales et Chefchaouen.</p>
-        <div class="eclipse-formules">
-          <article class="formule">
-            <h3>En petit groupe, max. 16 personnes</h3>
-            <p>10 jours / 9 nuits, du 30 juillet au 8 août 2027. Dès CHF 1'690.- par personne.</p>
-            <a class="lien-fleche" href="circuits/eclipse-petit-groupe.html">Voir le programme</a>
-          </article>
-          <article class="formule">
-            <h3>En privé</h3>
-            <p>9 jours / 8 nuits, du 29 juillet au 6 août 2027. Dès CHF 2'690.- par personne.</p>
-            <a class="lien-fleche" href="circuits/eclipse-prive.html">Voir le programme</a>
-          </article>
+        <p>Tanger se trouve sur la trajectoire de l'éclipse totale. Nous avons conçu deux formules pour la vivre depuis la ville du détroit, en petit groupe ou en privé, tout en découvrant les cités impériales et Chefchaouen.</p>
+        <div class="compte-a-rebours" data-cible="2027-08-02T00:00:00+01:00" aria-live="polite">
+          <div><strong data-jours>…</strong><span>jours</span></div>
+          <div><strong data-heures>…</strong><span>heures</span></div>
+          <div><strong data-minutes>…</strong><span>minutes</span></div>
+          <p>avant l'éclipse totale du 2 août 2027</p>
+        </div>
+        <div class="groupe-boutons" style="margin-top:20px">
+          <a class="btn btn-clair" href="eclipse-2027.html">Tout savoir sur l'éclipse 2027</a>
         </div>
       </div>
       <div class="eclipse-image">
@@ -202,79 +164,36 @@
       </div>
       <div class="grille-etapes">
         <article class="etape-item"><h3>Vos envies</h3><p>Vous nous décrivez votre projet, en ligne, par téléphone ou par WhatsApp.</p></article>
-        <article class="etape-item"><h3>Notre proposition</h3><p>Nous construisons un programme et un prix avec notre équipe au Maroc.</p></article>
+        <article class="etape-item"><h3>Notre proposition</h3><p>Sandra vous répond sous 24 h, puis construit un programme et un prix avec notre équipe au Maroc. Votre offre arrive sous 7 jours.</p></article>
         <article class="etape-item"><h3>Ajustements</h3><p>Nous affinons ensemble, jusqu'à ce que tout vous convienne.</p></article>
         <article class="etape-item"><h3>Départ</h3><p>Vous partez. Nous restons joignables pendant tout le voyage.</p></article>
       </div>
+      <p style="margin-top:20px"><a class="lien-fleche" href="qui-sommes-nous.html">Qui sommes-nous</a></p>
     </div>
   </section>
 
-  <section class="section section-sable" id="equipe" aria-labelledby="titre-equipe">
-    <div class="conteneur">
-      <div class="entete-section">
-        <span class="etiquette">Qui sommes-nous</span>
-        <h2 id="titre-equipe">Une agence valaisanne, une équipe au Maroc</h2>
-        <p class="sous-titre">Côté Maroc est la marque de Côté Voyages, agence familiale fondée en 1995 à Martigny, consacrée au Maroc. Nos circuits sont conçus avec notre équipe sur place et déjà proposés par d'autres tour-opérateurs suisses.</p>
-      </div>
-      <div class="grille-equipe">
-        <article class="personne">
-          <div class="photo-attente">[PHOTO DE SANDRA]</div>
-          <div><h3>Sandra Favre</h3><p>Conseillère, Martigny. Votre interlocutrice de la première idée au retour.</p></div>
-        </article>
-        <article class="personne">
-          <div class="photo-icone" aria-hidden="true"><svg class="icone" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></div>
-          <div><h3>Notre équipe au Maroc</h3><p>Guides, chauffeurs et accueil sur place, coordonnés depuis Martigny. Un seul interlocuteur pour vous : Sandra.</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
+  <div class="conteneur">
 
-  <section class="section" id="quand-partir" aria-labelledby="titre-quand">
-    <div class="conteneur">
-      <div class="entete-section">
-        <span class="etiquette">Préparer son voyage</span>
-        <h2 id="titre-quand">Quand partir ?</h2>
-      </div>
-      <ul class="mois" aria-label="Mois de l'année, périodes recommandées en surbrillance">
-        <li>Janv.</li><li>Févr.</li><li class="recommande">Mars</li><li class="recommande">Avril</li><li class="recommande">Mai</li><li>Juin</li>
-        <li>Juil.</li><li>Août</li><li class="recommande">Sept.</li><li class="recommande">Oct.</li><li class="recommande">Nov.</li><li>Déc.</li>
-      </ul>
-      <p class="legende"><span class="pastille" aria-hidden="true"></span>Périodes recommandées pour un circuit : le printemps et l'automne. Nous vous conseillons selon votre itinéraire, le désert et la côte n'ont pas le même calendrier.</p>
-      <ul class="liste-pratique">
-        <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="M8.5 17a3.5 3.5 0 0 1 7 0"/></svg><span>Passeport valable 6 mois après la date de retour.</span></li>
-        <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12c0-1 1-2 2.5-2H19a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 12V7a2 2 0 0 1 2-2h11l3 3"/><circle cx="16.5" cy="15" r="1.5"/></svg><span>Monnaie : le dirham marocain (MAD).</span></li>
-        <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16l20-6-2 4-6 2-3 5-2-1 1-5-6-1z"/></svg><span>Vols directs depuis Genève, environ 3 heures de vol jusqu'à Marrakech.</span></li>
-      </ul>
-    </div>
-  </section>
+  </div>
 
-  <section class="section section-sable" id="pro" aria-labelledby="titre-pro">
-    <div class="conteneur pro-bloc">
-      <div>
-        <span class="etiquette">Professionnels</span>
-        <h2 id="titre-pro">Vous êtes tour-opérateur ou agence ?</h2>
-        <p>Nos circuits figurent déjà aux catalogues de Buchard et de VT Vacances. Nous les proposons aux professionnels en séries à dates fixes ou en privé, en marque blanche.</p>
-      </div>
-      <a class="btn btn-secondaire" href="professionnels.html">Pour les professionnels</a>
-    </div>
-  </section>
-
-  <section class="section" id="contact" aria-labelledby="titre-contact">
+  <section class="section section-sable" id="contact" aria-labelledby="titre-contact">
     <div class="conteneur grille-cta">
       <div>
         <span class="etiquette">Votre projet</span>
         <h2 id="titre-contact">Parlons de votre voyage</h2>
-        <form class="formulaire" action="#" method="post">
+        <form class="formulaire" action="#" method="post" data-envoi="rapide" data-merci="merci.html">
           <div class="ligne-champs">
-            <div class="champ"><label for="cta-prenom">Prénom</label><input type="text" id="cta-prenom" name="prenom" autocomplete="given-name"></div>
-            <div class="champ"><label for="cta-email">E-mail</label><input type="email" id="cta-email" name="email" autocomplete="email"></div>
+            <div class="champ"><label for="cta-prenom">Prénom</label><input type="text" id="cta-prenom" name="prenom" autocomplete="given-name" required></div>
+            <div class="champ"><label for="cta-email">E-mail</label><input type="email" id="cta-email" name="email" autocomplete="email" required></div>
           </div>
-          <div class="champ"><label for="cta-projet">Parlez-nous de votre projet</label><textarea id="cta-projet" name="projet" placeholder="Qui part, quand, et ce qui vous fait envie"></textarea></div>
+          <div class="champ"><label for="cta-projet">Parlez-nous de votre projet</label><textarea id="cta-projet" name="message" placeholder="Qui part, quand, et ce qui vous fait envie" required></textarea></div>
+          <input type="text" name="site_web" tabindex="-1" autocomplete="off" class="piege" aria-hidden="true">
           <div class="groupe-boutons">
-            <button class="btn btn-principal" type="button">Envoyer ma demande</button>
+            <button class="btn btn-principal" type="submit">Envoyer ma demande</button>
             <a class="btn btn-secondaire" href="devis.html">Formulaire complet</a>
           </div>
-          <p class="note-formulaire">Réponse humaine, devis gratuit et sans engagement. Une réponse sous 24 h, puis votre offre sous 7 jours.</p>
+          <p class="message-envoi" hidden></p>
+          <p class="note-formulaire">Réponse humaine sous 24 h, devis gratuit et sans engagement.</p>
         </form>
       </div>
       <aside class="aparte">
@@ -282,13 +201,19 @@
         <ul>
           <li>WhatsApp : +41 79 858 72 17</li>
           <li>E-mail : sandra@cotevoyages.com</li>
-          <li>Rendez-vous en visio ou à Martigny, sur demande</li>
+          <li>Rendez-vous téléphonique avec Sandra, à l'heure qui vous convient</li>
         </ul>
-        <a class="btn btn-secondaire" href="https://wa.me/41798587217">Écrire sur WhatsApp</a>
+        <a class="btn btn-secondaire" href="contact.html">Prendre rendez-vous</a>
       </aside>
     </div>
   </section>
+
 </main>
+
+<a class="wa-flottant" href="https://wa.me/41798587217?text=Bonjour%2C%20je%20souhaite%20des%20renseignements%20sur%20un%20voyage%20au%20Maroc." aria-label="Écrire à Côté Maroc sur WhatsApp">
+  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a3.5 3.5 0 0 1-2-2l1-1-1-2z"/></svg>
+  <span>WhatsApp</span>
+</a>
 
 <footer class="pied">
   <div class="conteneur">
@@ -306,23 +231,29 @@
         <ul>
           <li><a href="mailto:sandra@cotevoyages.com">sandra@cotevoyages.com</a></li>
           <li><a href="https://wa.me/41798587217">WhatsApp +41 79 858 72 17</a></li>
+          <li><a href="contact.html">Prendre rendez-vous</a></li>
           <li><a href="devis.html">Demander un devis</a></li>
         </ul>
       </div>
       <div>
         <h3>Pages</h3>
         <ul>
-          <li><a href="index.html#circuits">Nos voyages</a></li>
-          <li><a href="index.html#envies">Envies</a></li>
-          <li><a href="index.html#eclipse">Éclipse 2027</a></li>
+          <li><a href="voyages.html">Nos voyages</a></li>
+          <li><a href="envies/index.html">Envies</a></li>
+          <li><a href="destinations/index.html">Destinations</a></li>
+          <li><a href="eclipse-2027.html">Éclipse 2027</a></li>
+          <li><a href="preparer-son-voyage.html">Préparer son voyage</a></li>
+          <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="professionnels.html">Professionnels</a></li>
         </ul>
       </div>
     </div>
-    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt.</div>
+    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt. Cartes : OpenStreetMap.</div>
   </div>
 </footer>
 
 <script src="js/site.js"></script>
+
 </body>
 </html>

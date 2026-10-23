@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>La palmeraie de Skoura · Destinations · Côté Maroc</title>
+<meta name="description" content="La palmeraie de Skoura, au pied de l'atlas. Ce qu'on y voit et les voyages Côté Maroc qui y passent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=JetBrains+Mono:wght@400;500&family=Jost:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body class="" data-webhook="https://horizoniach.app.n8n.cloud/webhook/cote-maroc-demande" data-wa="Bonjour, je m'intéresse à un voyage au Maroc passant par La palmeraie de Skoura.">
+<div class="bandeau-maquette">Maquette de travail · octobre 2026</div>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="logo" href="../index.html" aria-label="Côté Maroc, accueil">
+      <span class="logo-cote" aria-hidden="true"></span>
+      <span class="logo-maroc" aria-hidden="true"><span>m</span><span>a</span><span>r</span><span>o</span><span>c</span></span>
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="nav-principal">
+      <svg class="icone icone-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icone icone-fermer" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="nav" id="nav-principal" aria-label="Navigation principale">
+      <ul>
+        <li><a href="../voyages.html">Nos voyages</a></li>
+        <li><a href="../envies/index.html">Envies</a></li>
+        <li><a href="../destinations/index.html" aria-current="page">Destinations</a></li>
+        <li><a href="../eclipse-2027.html">Éclipse 2027</a></li>
+        <li><a href="../preparer-son-voyage.html">Préparer son voyage</a></li>
+        <li><a href="../qui-sommes-nous.html">Qui sommes-nous</a></li>
+        <li><a href="../professionnels.html">Professionnels</a></li>
+        <li class="nav-cta"><a class="btn btn-principal" href="../devis.html">Demander un devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="banniere banniere-fiche" aria-labelledby="titre-destination">
+    <img src="../img/oasis-tinghir.jpg" alt="Oasis au pied de l'Atlas, palmeraie et kasbahs en terre" fetchpriority="high">
+    <div class="conteneur">
+      <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../destinations/index.html">Destinations</a></li><li><span>La palmeraie de Skoura</span></li></ol></nav>
+      <span class="etiquette">Destination</span>
+      <h1 id="titre-destination">La palmeraie de Skoura</h1>
+      <p class="sous-titre">Au pied de l'Atlas.</p>
+    </div>
+  </section>
+  <div class="conteneur fiche-grille">
+    <div class="fiche-principal">
+      <section class="texte-long" aria-labelledby="titre-texte">
+        <h2 id="titre-texte" class="sr-only">Présentation</h2>
+        <p>À une quarantaine de kilomètres d'Ouarzazate, la palmeraie de Skoura déroule ses kasbahs en terre et ses jardins au pied de l'Atlas. C'est là que se trouve l'écolodge de notre séjour bien-être, une ferme d'hôtes éco-responsable au cœur de la verdure.</p>
+        <p>Marches dans la palmeraie, souk de Skoura ou de Toundoute, kasbah d'Amredhil, thé chez l'habitant : la vie authentique des oasis du Maroc, loin de l'agitation des grandes villes touristiques.</p>
+        
+      </section>
+      <section aria-labelledby="titre-a-voir">
+        <span class="etiquette">À voir</span>
+        <h2 id="titre-a-voir">Ce qu'on ne manque pas</h2>
+        <ul class="points-forts">
+            <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><span>La kasbah d'Amredhil</span></li>
+            <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><span>Le souk de Skoura</span></li>
+            <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><span>L'oued Dadès à Sidi Flah</span></li>
+            <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><span>La palmeraie à vélo ou à pied</span></li>
+        </ul>
+      </section>
+    </div>
+    <aside class="fiche-aside">
+      <div class="en-bref">
+        <span class="etiquette">Situation</span>
+        <div class="carte-voyage carte-destination" id="carte" data-etapes='[{"nom": "La palmeraie de Skoura", "lat": 31.063, "lng": -6.556}]' data-boucle="false" data-zoom="8" role="img" aria-label="Carte de situation"></div>
+        <a class="btn btn-principal" href="../devis.html?etape=La%20palmeraie%20de%20Skoura">Demander un devis</a>
+      </div>
+    </aside>
+  </div>
+  <div class="conteneur">
+      <section class="section" aria-labelledby="titre-voyages-lies">
+        <div class="entete-section">
+          <span class="etiquette">Nos voyages</span>
+          <h2 id="titre-voyages-lies">Nos voyages qui passent par La palmeraie de Skoura</h2>
+        </div>
+        <div class="grille-cartes grille-cartes-3">
+        <article class="carte" data-type="sejour" data-jours="8" data-budget="1" data-mois="tous">
+          <img src="../img/hammam.jpg" alt="Hammam aux mosaïques dorées, bancs de marbre et lumière chaude" loading="lazy">
+          <div class="carte-corps">
+            <span class="etiquette">Séjour bien-être</span>
+            <h3><a href="../circuits/bien-etre-skoura.html">Bien-être dans la palmeraie de Skoura</a></h3>
+            <p>Sept nuits dans un écolodge au pied de l'Atlas : hammam, massages, marches dans la palmeraie et cuisine du jardin.</p>
+            <div class="carte-meta"><span>7 nuits · dès <strong>CHF 1'200.-</strong> hors vol</span><a class="lien-fleche" href="../circuits/bien-etre-skoura.html">Découvrir</a></div>
+          </div>
+        </article>
+        </div>
+      </section>
+  </div>
+</main>
+
+<a class="wa-flottant" href="https://wa.me/41798587217?text=Bonjour%2C%20je%20m%27int%C3%A9resse%20%C3%A0%20un%20voyage%20au%20Maroc%20passant%20par%20La%20palmeraie%20de%20Skoura." aria-label="Écrire à Côté Maroc sur WhatsApp">
+  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a3.5 3.5 0 0 1-2-2l1-1-1-2z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div class="pied-marque">
+        <a class="logo logo-blanc" href="../index.html" aria-label="Côté Maroc, accueil">
+          <span class="logo-cote" aria-hidden="true"></span>
+          <span class="logo-maroc" aria-hidden="true"><span>m</span><span>a</span><span>r</span><span>o</span><span>c</span></span>
+        </a>
+        <p>Une marque de Côté Voyages, Martigny.</p>
+        <p>Tour-opérateur spécialiste du Maroc. Circuits en petit groupe, en privé et sur mesure.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:sandra@cotevoyages.com">sandra@cotevoyages.com</a></li>
+          <li><a href="https://wa.me/41798587217">WhatsApp +41 79 858 72 17</a></li>
+          <li><a href="../contact.html">Prendre rendez-vous</a></li>
+          <li><a href="../devis.html">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="../voyages.html">Nos voyages</a></li>
+          <li><a href="../envies/index.html">Envies</a></li>
+          <li><a href="../destinations/index.html">Destinations</a></li>
+          <li><a href="../eclipse-2027.html">Éclipse 2027</a></li>
+          <li><a href="../preparer-son-voyage.html">Préparer son voyage</a></li>
+          <li><a href="../qui-sommes-nous.html">Qui sommes-nous</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../professionnels.html">Professionnels</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt. Cartes : OpenStreetMap.</div>
+  </div>
+</footer>
+
+<script src="../js/site.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>window.initialiserCartes && window.initialiserCartes();</script>
+</body>
+</html>

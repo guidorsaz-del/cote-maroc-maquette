@@ -10,9 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=JetBrains+Mono:wght@400;500&family=Jost:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
-<body class="a-barre-mobile">
-<div class="bandeau-maquette">Maquette de travail · octobre 2026 · les formulaires n'envoient rien</div>
+<body class="a-barre-mobile" data-webhook="https://horizoniach.app.n8n.cloud/webhook/cote-maroc-demande" data-wa="Bonjour, je m'intéresse au voyage « Éclipse solaire et trésors impériaux ».">
+<div class="bandeau-maquette">Maquette de travail · octobre 2026</div>
 
 <header class="entete">
   <div class="conteneur">
@@ -27,11 +28,12 @@
     </button>
     <nav class="nav" id="nav-principal" aria-label="Navigation principale">
       <ul>
-        <li><a href="../index.html#circuits">Nos voyages</a></li>
-        <li><a href="../index.html#envies">Envies</a></li>
-        <li><a href="../index.html#eclipse">Éclipse 2027</a></li>
-        <li><a href="../index.html#quand-partir">Préparer son voyage</a></li>
-        <li><a href="../index.html#equipe">Qui sommes-nous</a></li>
+        <li><a href="../voyages.html" aria-current="page">Nos voyages</a></li>
+        <li><a href="../envies/index.html">Envies</a></li>
+        <li><a href="../destinations/index.html">Destinations</a></li>
+        <li><a href="../eclipse-2027.html">Éclipse 2027</a></li>
+        <li><a href="../preparer-son-voyage.html">Préparer son voyage</a></li>
+        <li><a href="../qui-sommes-nous.html">Qui sommes-nous</a></li>
         <li><a href="../professionnels.html">Professionnels</a></li>
         <li class="nav-cta"><a class="btn btn-principal" href="../devis.html">Demander un devis</a></li>
       </ul>
@@ -40,10 +42,10 @@
 </header>
 
 <main>
-  <section class="banniere banniere-fiche" aria-labelledby="titre-circuit">
+<section class="banniere banniere-fiche" aria-labelledby="titre-circuit">
     <img src="../img/chefchaouen.jpg" alt="Ruelle aux façades bleues de Chefchaouen" fetchpriority="high">
     <div class="conteneur">
-      <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../index.html#circuits">Nos voyages</a></li><li><span>Éclipse solaire et trésors impériaux, petit groupe</span></li></ol></nav>
+      <nav class="fil-ariane" aria-label="Fil d'Ariane"><ol><li><a href="../index.html">Accueil</a></li><li><a href="../voyages.html">Nos voyages</a></li><li><span>Éclipse solaire et trésors impériaux, petit groupe</span></li></ol></nav>
       <span class="etiquette">Petit groupe · max. 16 personnes · 10 jours / 9 nuits</span>
       <h1 id="titre-circuit">Éclipse solaire et trésors impériaux</h1>
       <p class="sous-titre">Du 30 juillet au 8 août 2027. Les cités impériales, Chefchaouen et l'éclipse totale du 2 août vécue depuis Tanger.</p>
@@ -74,6 +76,8 @@
             <li class="depart">Casablanca</li><li>Rabat</li><li>Tanger</li><li>Chefchaouen</li><li>Fès</li><li>Bin El Ouidane</li><li>Marrakech</li><li class="arrivee">Casablanca</li>
           </ol>
         </div>
+        <div class="carte-voyage" id="carte" data-etapes='[{"nom": "Casablanca", "lat": 33.5731, "lng": -7.5898}, {"nom": "Rabat", "lat": 34.0209, "lng": -6.8416}, {"nom": "Tanger", "lat": 35.7595, "lng": -5.834}, {"nom": "Chefchaouen", "lat": 35.1688, "lng": -5.2636}, {"nom": "Fès", "lat": 34.0181, "lng": -5.0078}, {"nom": "Bin El Ouidane", "lat": 32.1, "lng": -6.47}, {"nom": "Marrakech", "lat": 31.6295, "lng": -7.9811}, {"nom": "Casablanca", "lat": 33.5731, "lng": -7.5898}]' data-boucle="true" role="img" aria-label="Carte des étapes du voyage"></div>
+        <p class="mentions">Carte indicative des étapes. Les tracés exacts dépendent des routes et du programme du jour.</p>
       </section>
 
       <section aria-labelledby="titre-programme">
@@ -197,7 +201,7 @@
         <h2 id="titre-suite">Vous préférez ce voyage en privé ?</h2>
         <p class="sous-titre">Le même itinéraire existe en véhicule privé, du 29 juillet au 6 août 2027, au départ de Marrakech.</p>
         <div class="groupe-boutons">
-          <a class="btn btn-principal" href="../devis.html">Demander un devis</a>
+          <a class="btn btn-principal" href="../devis.html?voyage=eclipse-petit-groupe">Demander un devis</a>
           <a class="btn btn-secondaire" href="eclipse-prive.html">Voir la version privée</a>
         </div>
       </section>
@@ -214,17 +218,26 @@
           <div><dt><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="14" rx="2"/><path d="M4 10h16M8 18v2M16 18v2"/></svg><span class="sr-only">Transport</span></dt><dd>Minibus avec guide accompagnateur, visites avec guide francophone</dd></div>
           <div><dt><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16l20-6-2 4-6 2-3 5-2-1 1-5-6-1z"/></svg><span class="sr-only">Vols</span></dt><dd>Vols internationaux non inclus, nous pouvons vous les proposer</dd></div>
         </dl>
-        <a class="btn btn-principal" href="../devis.html">Demander un devis</a>
+        <a class="btn btn-principal" href="../devis.html?voyage=eclipse-petit-groupe">Demander un devis</a>
         <a class="btn btn-secondaire" href="https://wa.me/41798587217">WhatsApp +41 79 858 72 17</a>
+        <div class="partage">
+          <span class="etiquette">Partager</span>
+          <div class="groupe-boutons">
+            <button type="button" class="btn btn-secondaire btn-petit" data-partager data-titre="Éclipse solaire et trésors impériaux · Côté Maroc">Envoyer à un proche</button>
+            <a class="btn btn-secondaire btn-petit" href="mailto:?subject=%C3%89clipse%20solaire%20et%20tr%C3%A9sors%20imp%C3%A9riaux%20%C2%B7%20C%C3%B4t%C3%A9%20Maroc&amp;body=%C3%89clipse%20solaire%20et%20tr%C3%A9sors%20imp%C3%A9riaux%20%C2%B7%20C%C3%B4t%C3%A9%20Maroc%20%3A%20" data-partager-mail>Par e-mail</a>
+            <button type="button" class="btn btn-secondaire btn-petit" data-imprimer>Imprimer la fiche</button>
+          </div>
+        </div>
       </div>
     </aside>
   </div>
+
 </main>
 
-<div class="barre-mobile">
-  <div class="prix-barre">dès CHF 1'690.-<small>par personne, 10 jours</small></div>
-  <a class="btn btn-principal" href="../devis.html">Demander un devis</a>
-</div>
+<a class="wa-flottant" href="https://wa.me/41798587217?text=Bonjour%2C%20je%20m%27int%C3%A9resse%20au%20voyage%20%C2%AB%20%C3%89clipse%20solaire%20et%20tr%C3%A9sors%20imp%C3%A9riaux%20%C2%BB." aria-label="Écrire à Côté Maroc sur WhatsApp">
+  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a3.5 3.5 0 0 1-2-2l1-1-1-2z"/></svg>
+  <span>WhatsApp</span>
+</a>
 
 <footer class="pied">
   <div class="conteneur">
@@ -242,23 +255,30 @@
         <ul>
           <li><a href="mailto:sandra@cotevoyages.com">sandra@cotevoyages.com</a></li>
           <li><a href="https://wa.me/41798587217">WhatsApp +41 79 858 72 17</a></li>
+          <li><a href="../contact.html">Prendre rendez-vous</a></li>
           <li><a href="../devis.html">Demander un devis</a></li>
         </ul>
       </div>
       <div>
         <h3>Pages</h3>
         <ul>
-          <li><a href="../index.html#circuits">Nos voyages</a></li>
-          <li><a href="../index.html#envies">Envies</a></li>
-          <li><a href="../index.html#eclipse">Éclipse 2027</a></li>
+          <li><a href="../voyages.html">Nos voyages</a></li>
+          <li><a href="../envies/index.html">Envies</a></li>
+          <li><a href="../destinations/index.html">Destinations</a></li>
+          <li><a href="../eclipse-2027.html">Éclipse 2027</a></li>
+          <li><a href="../preparer-son-voyage.html">Préparer son voyage</a></li>
+          <li><a href="../qui-sommes-nous.html">Qui sommes-nous</a></li>
+          <li><a href="../contact.html">Contact</a></li>
           <li><a href="../professionnels.html">Professionnels</a></li>
         </ul>
       </div>
     </div>
-    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt.</div>
+    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt. Cartes : OpenStreetMap.</div>
   </div>
 </footer>
 
 <script src="../js/site.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>window.initialiserCartes && window.initialiserCartes();</script>
 </body>
 </html>
