@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Demander un devis · Côté Maroc</title>
+<meta name="description" content="Décrivez votre projet de voyage au Maroc en quatre étapes. Devis gratuit et sans engagement, réponse humaine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=JetBrains+Mono:wght@400;500&family=Jost:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bandeau-maquette">Maquette de travail · octobre 2026 · les formulaires n'envoient rien</div>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="logo" href="index.html" aria-label="Côté Maroc, accueil">
+      <span class="logo-cote" aria-hidden="true"></span>
+      <span class="logo-maroc" aria-hidden="true"><span>m</span><span>a</span><span>r</span><span>o</span><span>c</span></span>
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="nav-principal">
+      <svg class="icone icone-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icone icone-fermer" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="nav" id="nav-principal" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html#circuits">Circuits</a></li>
+        <li><a href="index.html#envies">Envies</a></li>
+        <li><a href="index.html#eclipse">Éclipse 2027</a></li>
+        <li><a href="index.html#quand-partir">Préparer son voyage</a></li>
+        <li><a href="index.html#equipe">Qui sommes-nous</a></li>
+        <li><a href="professionnels.html">Professionnels</a></li>
+        <li class="nav-cta"><a class="btn btn-principal" href="devis.html" aria-current="page">Demander un devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section section-sable">
+    <div class="conteneur">
+      <span class="etiquette">Demande de devis</span>
+      <h1>Décrivez-nous votre voyage</h1>
+      <p class="sous-titre">Quatre étapes courtes. Vous pouvez laisser des cases vides : nous complétons ensemble ensuite. Devis gratuit et sans engagement.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur grille-cta">
+      <form class="etapes-devis" action="#" method="post">
+
+        <div class="bloc-etape">
+          <h2>Votre projet</h2>
+          <div class="formulaire">
+            <fieldset>
+              <legend>Qu'est-ce qui vous attire ? <span class="facultatif">(plusieurs choix possibles)</span></legend>
+              <div class="cases">
+                <label class="case"><input type="checkbox" name="envie" value="desert"> Désert et dunes</label>
+                <label class="case"><input type="checkbox" name="envie" value="imperiales"> Villes impériales</label>
+                <label class="case"><input type="checkbox" name="envie" value="marrakech"> Marrakech</label>
+                <label class="case"><input type="checkbox" name="envie" value="nord"> Nord et Chefchaouen</label>
+                <label class="case"><input type="checkbox" name="envie" value="atlas"> Atlas et randonnée</label>
+                <label class="case"><input type="checkbox" name="envie" value="cote"> Côte atlantique</label>
+                <label class="case"><input type="checkbox" name="envie" value="eclipse"> Éclipse du 2 août 2027</label>
+                <label class="case"><input type="checkbox" name="envie" value="noces"> Voyage de noces</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Avez-vous déjà des étapes en tête ?</legend>
+              <div class="radios">
+                <label class="case"><input type="radio" name="etapes" value="oui"> Oui, je les indique ci-dessous</label>
+                <label class="case"><input type="radio" name="etapes" value="non" checked> Je ne sais pas encore</label>
+              </div>
+            </fieldset>
+            <div class="champ">
+              <label for="projet">Votre projet en quelques mots <span class="facultatif">(facultatif)</span></label>
+              <textarea id="projet" name="projet" placeholder="Les lieux qui vous attirent, le rythme souhaité, une occasion particulière"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="bloc-etape">
+          <h2>Quand et qui</h2>
+          <div class="formulaire">
+            <div class="ligne-champs">
+              <div class="champ"><label for="mois">Mois de départ souhaité</label><input type="month" id="mois" name="mois"></div>
+              <div class="champ"><label for="duree">Durée</label>
+                <select id="duree" name="duree">
+                  <option value="">Choisir</option>
+                  <option>Moins d'une semaine</option>
+                  <option>7 à 10 jours</option>
+                  <option>11 à 14 jours</option>
+                  <option>Plus de deux semaines</option>
+                  <option>Je ne sais pas encore</option>
+                </select>
+              </div>
+            </div>
+            <fieldset>
+              <legend>Vos dates sont-elles flexibles ?</legend>
+              <div class="radios">
+                <label class="case"><input type="radio" name="flexible" value="oui"> Oui, de quelques jours</label>
+                <label class="case"><input type="radio" name="flexible" value="non"> Non, dates fixes</label>
+              </div>
+            </fieldset>
+            <div class="ligne-champs">
+              <div class="champ"><label for="adultes">Adultes</label><input type="number" id="adultes" name="adultes" min="1" max="30" inputmode="numeric"></div>
+              <div class="champ"><label for="enfants">Enfants <span class="facultatif">(facultatif)</span></label><input type="number" id="enfants" name="enfants" min="0" max="20" inputmode="numeric"></div>
+            </div>
+            <div class="champ"><label for="ages">Âge des enfants au moment du voyage <span class="facultatif">(facultatif)</span></label><input type="text" id="ages" name="ages" placeholder="Par exemple : 6 et 11 ans"></div>
+          </div>
+        </div>
+
+        <div class="bloc-etape">
+          <h2>Style et budget</h2>
+          <div class="formulaire">
+            <fieldset>
+              <legend>Budget par personne, hors vols <span class="facultatif">(facultatif)</span></legend>
+              <div class="radios">
+                <label class="case"><input type="radio" name="budget" value="1"> Moins de CHF 1'500.-</label>
+                <label class="case"><input type="radio" name="budget" value="2"> CHF 1'500.- à 2'500.-</label>
+                <label class="case"><input type="radio" name="budget" value="3"> CHF 2'500.- à 4'000.-</label>
+                <label class="case"><input type="radio" name="budget" value="4"> Plus de CHF 4'000.-</label>
+                <label class="case"><input type="radio" name="budget" value="0"> Je préfère en parler</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Niveau de confort</legend>
+              <div class="radios">
+                <label class="case"><input type="radio" name="confort" value="simple"> Simple et authentique</label>
+                <label class="case"><input type="radio" name="confort" value="confort"> Confort, hôtels 4* et riads</label>
+                <label class="case"><input type="radio" name="confort" value="charme"> Charme et haut de gamme</label>
+              </div>
+            </fieldset>
+            <div class="ligne-champs">
+              <div class="champ"><label for="aeroport">Aéroport de départ</label>
+                <select id="aeroport" name="aeroport">
+                  <option>Genève</option>
+                  <option>Bâle</option>
+                  <option>Zurich</option>
+                  <option>Autre ou à définir</option>
+                </select>
+              </div>
+              <fieldset>
+                <legend>Souhaitez-vous que nous incluions les vols ?</legend>
+                <div class="radios">
+                  <label class="case"><input type="radio" name="vols" value="oui" checked> Oui</label>
+                  <label class="case"><input type="radio" name="vols" value="non"> Non, je m'en occupe</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="bloc-etape">
+          <h2>Vos coordonnées</h2>
+          <div class="formulaire">
+            <div class="ligne-champs">
+              <div class="champ"><label for="prenom">Prénom</label><input type="text" id="prenom" name="prenom" autocomplete="given-name"></div>
+              <div class="champ"><label for="nom">Nom</label><input type="text" id="nom" name="nom" autocomplete="family-name"></div>
+            </div>
+            <div class="ligne-champs">
+              <div class="champ"><label for="email">E-mail</label><input type="email" id="email" name="email" autocomplete="email"></div>
+              <div class="champ"><label for="tel">Téléphone <span class="facultatif">(facultatif)</span></label><input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="+41 79 000 00 00"></div>
+            </div>
+            <fieldset>
+              <legend>Comment préférez-vous être recontacté ?</legend>
+              <div class="radios">
+                <label class="case"><input type="radio" name="canal" value="email" checked> E-mail</label>
+                <label class="case"><input type="radio" name="canal" value="tel"> Téléphone</label>
+                <label class="case"><input type="radio" name="canal" value="whatsapp"> WhatsApp</label>
+                <label class="case"><input type="radio" name="canal" value="visio"> Visio</label>
+              </div>
+            </fieldset>
+            <div class="champ"><label for="source">Comment nous avez-vous connus ? <span class="facultatif">(facultatif)</span></label>
+              <select id="source" name="source">
+                <option value="">Choisir</option>
+                <option>Côté Voyages</option>
+                <option>Bouche à oreille</option>
+                <option>Instagram ou Facebook</option>
+                <option>LinkedIn</option>
+                <option>Recherche Google</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <label class="case"><input type="checkbox" name="newsletter"> Je souhaite recevoir les nouveautés de Côté Maroc par e-mail, quelques fois par an.</label>
+            <p class="note-formulaire">Vos données servent uniquement à préparer votre devis. <a href="#">Protection des données</a>.</p>
+            <div class="groupe-boutons">
+              <button class="btn btn-principal" type="button">Envoyer ma demande</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <aside class="aparte">
+        <h3>Ce qui se passe ensuite</h3>
+        <ul>
+          <li>Un conseiller lit votre demande, pas un robot.</li>
+          <li>Nous revenons vers vous sous <span class="placeholder">[DÉLAI DE RÉPONSE]</span>, par le canal que vous avez choisi.</li>
+          <li>Vous recevez une première proposition, que nous ajustons ensemble.</li>
+          <li>Devis gratuit et sans engagement.</li>
+        </ul>
+        <h3 style="margin-top:24px">Vous préférez parler ?</h3>
+        <ul>
+          <li>WhatsApp : +41 79 858 72 17</li>
+          <li>E-mail : contact@cotevoyages.com</li>
+        </ul>
+        <a class="btn btn-secondaire" href="https://wa.me/41798587217">Écrire sur WhatsApp</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div class="pied-marque">
+        <a class="logo logo-blanc" href="index.html" aria-label="Côté Maroc, accueil">
+          <span class="logo-cote" aria-hidden="true"></span>
+          <span class="logo-maroc" aria-hidden="true"><span>m</span><span>a</span><span>r</span><span>o</span><span>c</span></span>
+        </a>
+        <p>Une marque de Côté Voyages, Martigny.</p>
+        <p>Tour-opérateur spécialiste du Maroc. Circuits en petit groupe, en privé et sur mesure.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:contact@cotevoyages.com">contact@cotevoyages.com</a></li>
+          <li><a href="https://wa.me/41798587217">WhatsApp +41 79 858 72 17</a></li>
+          <li><a href="devis.html">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Informations</h3>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Conditions de voyage</a></li>
+          <li><a href="#">Protection des données</a></li>
+          <li><a href="#">Garantie des fonds clients</a></li>
+          <li><a href="professionnels.html">Espace professionnels</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">Maquette de travail, octobre 2026. Photos : Pexels, voir les crédits dans le dépôt.</div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>
