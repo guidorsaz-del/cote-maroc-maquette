@@ -478,3 +478,18 @@ body.a-barre-mobile .wa-flottant { bottom: 88px; }
 
 /* Champ anti-robot : hors écran, jamais dans le flux */
 form input.piege { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; min-height: 0 !important; padding: 0 !important; border: 0 !important; opacity: 0; pointer-events: none; }
+
+/* Portraits et note Google */
+.photo-personne { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--rayon); background: var(--sable); }
+.entete-portrait { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+.portrait-rond { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex: none; background: var(--sable); border: 3px solid var(--blanc); box-shadow: 0 2px 10px rgba(27,30,51,.12); }
+.entete-portrait .etiquette { margin-bottom: 6px; }
+.entete-portrait h2 { margin-bottom: 0; }
+.pied-note { margin-top: 12px !important; font-size: .9rem; }
+.pied-note .etoiles { color: #F2B544; margin-right: 4px; }
+.bande-note { display: grid; gap: 20px; align-items: center; background: var(--blanc); border: 1px solid var(--pierre); border-radius: var(--rayon); padding: 24px; }
+.bande-note-chiffre { font-family: var(--titre); font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1; color: var(--majorelle-500); white-space: nowrap; }
+.bande-note-chiffre small { font-family: var(--texte); font-size: 1rem; color: var(--gris); margin-left: 6px; }
+.bande-note h2 { font-size: 1.4rem; margin: 6px 0 8px; }
+.bande-note p { color: var(--gris); font-size: .97rem; max-width: 60ch; }
+@media (min-width: 700px) { .bande-note { grid-template-columns: auto 1fr; gap: 32px; padding: 28px 32px; } }

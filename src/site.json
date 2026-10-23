@@ -8,22 +8,73 @@
   "webhookDevis": "https://horizoniach.app.n8n.cloud/webhook/cote-maroc-demande",
   "avisGoogleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJi99VVdLJjkcRDCZ7yGzJftY",
   "nav": [
-    {"href": "voyages.html", "libelle": "Nos voyages"},
-    {"href": "envies/index.html", "libelle": "Envies"},
-    {"href": "destinations/index.html", "libelle": "Destinations"},
-    {"href": "eclipse-2027.html", "libelle": "Éclipse 2027"},
-    {"href": "preparer-son-voyage.html", "libelle": "Préparer son voyage"},
-    {"href": "qui-sommes-nous.html", "libelle": "Qui sommes-nous"},
-    {"href": "professionnels.html", "libelle": "Professionnels"}
+    {
+      "href": "voyages.html",
+      "libelle": "Nos voyages"
+    },
+    {
+      "href": "envies/index.html",
+      "libelle": "Envies"
+    },
+    {
+      "href": "destinations/index.html",
+      "libelle": "Destinations"
+    },
+    {
+      "href": "eclipse-2027.html",
+      "libelle": "Éclipse 2027"
+    },
+    {
+      "href": "preparer-son-voyage.html",
+      "libelle": "Préparer son voyage"
+    },
+    {
+      "href": "qui-sommes-nous.html",
+      "libelle": "Qui sommes-nous"
+    },
+    {
+      "href": "professionnels.html",
+      "libelle": "Professionnels"
+    }
   ],
   "piedPages": [
-    {"href": "voyages.html", "libelle": "Nos voyages"},
-    {"href": "envies/index.html", "libelle": "Envies"},
-    {"href": "destinations/index.html", "libelle": "Destinations"},
-    {"href": "eclipse-2027.html", "libelle": "Éclipse 2027"},
-    {"href": "preparer-son-voyage.html", "libelle": "Préparer son voyage"},
-    {"href": "qui-sommes-nous.html", "libelle": "Qui sommes-nous"},
-    {"href": "contact.html", "libelle": "Contact"},
-    {"href": "professionnels.html", "libelle": "Professionnels"}
-  ]
+    {
+      "href": "voyages.html",
+      "libelle": "Nos voyages"
+    },
+    {
+      "href": "envies/index.html",
+      "libelle": "Envies"
+    },
+    {
+      "href": "destinations/index.html",
+      "libelle": "Destinations"
+    },
+    {
+      "href": "eclipse-2027.html",
+      "libelle": "Éclipse 2027"
+    },
+    {
+      "href": "preparer-son-voyage.html",
+      "libelle": "Préparer son voyage"
+    },
+    {
+      "href": "qui-sommes-nous.html",
+      "libelle": "Qui sommes-nous"
+    },
+    {
+      "href": "contact.html",
+      "libelle": "Contact"
+    },
+    {
+      "href": "professionnels.html",
+      "libelle": "Professionnels"
+    }
+  ],
+  "noteGoogle": {
+    "note": "4,8",
+    "sur": 5,
+    "avis": 67,
+    "releve": "23 octobre 2026"
+  }
 }

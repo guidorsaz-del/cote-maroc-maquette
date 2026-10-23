@@ -130,10 +130,40 @@ def carte_destinations():
     return f'''        <div class="carte-voyage" id="carte" data-etapes='{points.replace("'", "&#39;")}' data-boucle="false" data-ligne="false" data-direction="top" role="img" aria-label="Carte des destinations"></div>'''
 
 
-def avis_html():
-    """Avis Google de Côté Voyages qui parlent du Maroc. Rien n'est affiché tant que src/avis.json est vide."""
-    if not AVIS:
+def etoiles_html(note_texte):
+    note = float(str(note_texte).replace(',', '.'))
+    pleines = int(round(note))
+    return '<span class="etoiles" aria-hidden="true">' + '★' * pleines + '☆' * (5 - pleines) + '</span>'
+
+
+def note_google_pied():
+    n = SITE.get('noteGoogle')
+    if not n:
         return ''
+    return f'        <p class="pied-note">{etoiles_html(n["note"])} Côté Voyages est notée <strong>{n["note"]} / {n["sur"]}</strong> sur Google ({n["avis"]} avis). <a href="{SITE["avisGoogleUrl"]}">Voir les avis</a></p>'
+
+
+def bande_note_google():
+    n = SITE.get('noteGoogle')
+    if not n:
+        return ''
+    return f'''      <section class="section" id="avis" aria-labelledby="titre-note">
+        <div class="bande-note">
+          <div class="bande-note-chiffre">{n["note"]}<small>/ {n["sur"]}</small></div>
+          <div>
+            {etoiles_html(n["note"])}
+            <h2 id="titre-note">La note Google de Côté Voyages, notre agence</h2>
+            <p>{n["avis"]} voyageurs ont laissé un avis sur la fiche Google de Côté Voyages, à Martigny. Côté Maroc est jeune : ses premiers avis viendront de ses premiers voyageurs, et nous les publierons ici tels quels.</p>
+            <a class="lien-fleche" href="{SITE["avisGoogleUrl"]}">Lire les avis sur Google</a>
+          </div>
+        </div>
+      </section>'''
+
+
+def avis_html():
+    """Avis Google de Côté Voyages qui parlent du Maroc. Tant que src/avis.json est vide, seule la note moyenne est affichée."""
+    if not AVIS:
+        return bande_note_google()
     blocs = []
     for a in AVIS:
         etoiles = '★' * int(a.get('note', 5)) + '☆' * (5 - int(a.get('note', 5)))
@@ -289,6 +319,7 @@ def ecrire_page(chemin, titre, description, main, body_class='', whatsapp='', ti
             .replace('{{WA_AFFICHE}}', SITE['whatsappAffiche'])
             .replace('{{EMAIL}}', SITE['email'])
             .replace('{{PIED_PAGES}}', pied_pages_html(prefix))
+            .replace('{{NOTE_GOOGLE}}', note_google_pied())
             .replace('{{SCRIPTS_EXTRA}}', '\n'.join(scripts_extra)))
     sortie = ROOT / chemin
     sortie.parent.mkdir(parents=True, exist_ok=True)
