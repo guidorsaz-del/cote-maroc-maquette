@@ -109,15 +109,13 @@ ul { padding-left: 1.2em; }
 .menu-bouton[aria-expanded="true"] .icone-menu { display: none; }
 .menu-bouton[aria-expanded="true"] .icone-fermer { display: block; }
 .nav { display: none; }
-.nav.ouvert { display: block; position: fixed; inset: 0; top: 0; z-index: 60; background: var(--ivoire); padding: 100px var(--gouttiere) 40px; overflow-y: auto; }
+.nav.ouvert { display: block; position: fixed; inset: 0; top: 0; z-index: 60; background: var(--ivoire); padding: 124px var(--gouttiere) 40px; overflow-y: auto; }
 .nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .nav a:not(.btn) { display: block; padding: 14px 8px; color: var(--encre); text-decoration: none; font-size: 1.25rem; font-weight: 500; border-bottom: 1px solid var(--pierre); }
 .nav a:not(.btn):hover { color: var(--majorelle-500); }
 .nav .nav-cta { margin-top: 16px; }
 .nav .nav-cta .btn { width: 100%; }
-.nav.ouvert + .menu-fermer-zone { display: block; }
-.menu-fermer-fixe { position: fixed; top: 14px; right: var(--gouttiere); z-index: 70; display: none; }
-body.menu-ouvert .menu-fermer-fixe { display: inline-flex; }
+body.menu-ouvert .entete { z-index: 70; }
 @media (min-width: 900px) {
   .menu-bouton { display: none; }
   .nav { display: block; }
