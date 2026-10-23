@@ -253,7 +253,9 @@ fieldset { border: 0; padding: 0; margin: 0; }
 @media (min-width: 700px) { .pied-grille { grid-template-columns: 1.4fr 1fr 1fr; } }
 
 /* Fiche circuit */
-.fiche-grille { display: grid; gap: 32px; }
+.fiche-grille { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.fiche-grille > *, .grille-cta > *, .deux-colonnes > *, .eclipse-grille > *, .pro-bloc > * { min-width: 0; }
+.ruban-defilant { max-width: 100%; }
 .fiche-principal > section { padding: 32px 0; border-bottom: 1px solid var(--pierre); }
 .fiche-principal > section:last-child { border-bottom: 0; }
 .fiche-principal h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
