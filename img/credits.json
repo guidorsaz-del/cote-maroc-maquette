@@ -124,5 +124,47 @@
   "photographer": "pierre matile",
   "url": "https://www.pexels.com/photo/scenic-view-of-ouarzazate-lake-in-morocco-37700635/",
   "alt": "Beautiful landscape of Ouarzazate Lake and desert surrounding in Morocco."
+ },
+ {
+  "file": "img/oasis-tinghir.jpg",
+  "id": 37441764,
+  "photographer": "Cornelis Johannes (Kees) van Leeuwen",
+  "url": "https://www.pexels.com/photo/panoramic-view-of-tinghir-oasis-and-village-37441764/",
+  "alt": "A stunning view of the Tinghir Oasis with traditional Moroccan architecture and arid mountains."
+ },
+ {
+  "file": "img/volubilis.jpg",
+  "id": 18767562,
+  "photographer": "Christophe RASCLE",
+  "url": "https://www.pexels.com/photo/ruins-of-volubilis-basilica-in-morocco-18767562/",
+  "alt": "Explore the ancient Roman ruins of Volubilis, Morocco, amidst a dramatic landscape."
+ },
+ {
+  "file": "img/villa-piscine.jpg",
+  "id": 27945034,
+  "photographer": "Andrea Musto",
+  "url": "https://www.pexels.com/photo/a-pool-in-a-courtyard-with-potted-plants-27945034/",
+  "alt": "A tranquil luxury courtyard featuring a beautiful swimming pool and elegant architecture under a sunny sky."
+ },
+ {
+  "file": "img/hammam.jpg",
+  "id": 7598373,
+  "photographer": "Max Vakhtbovych",
+  "url": "https://www.pexels.com/photo/bathhouse-interior-with-a-sink-and-seats-7598373/",
+  "alt": "Elegant interior of a mosaic bathhouse with warm lighting and marble seats enhancing the luxurious atmosphere."
+ },
+ {
+  "file": "img/tanger-port.jpg",
+  "id": 13142301,
+  "photographer": "Reda Faghloumi",
+  "url": "https://www.pexels.com/photo/port-de-tangier-ville-in-morocco-13142301/",
+  "alt": "A captivating view of Tanger harbor with the ocean and city in the background."
+ },
+ {
+  "file": "img/palmeraie-coucher.jpg",
+  "id": 16919234,
+  "photographer": "YOUSSEF elbelghiti",
+  "url": "https://www.pexels.com/photo/silhouette-of-palm-trees-at-sunset-16919234/",
+  "alt": "Captivating sunset view of palm trees silhouetted against the colorful sky in Tata, Morocco."
  }
 ]

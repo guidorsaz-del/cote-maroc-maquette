@@ -4,16 +4,20 @@ Maquette statique du futur site de Côté Maroc, marque de Côté Voyages (Marti
 
 ## Pages
 
-- `index.html` : accueil (circuits, envies, éclipse 2027, comment ça marche, équipe, quand partir, professionnels, contact)
-- `circuits/sur-les-routes-du-maroc.html` : circuit accompagné de 10 jours
+- `index.html` : accueil (voyages, envies, éclipse 2027, comment ça marche, équipe, quand partir, professionnels, contact)
+- `circuits/sur-les-routes-du-maroc.html` : circuit accompagné, 10 jours
+- `circuits/villes-imperiales.html` : villes impériales millénaires, voyage privé, 8 jours
+- `circuits/nord-sud.html` : du Nord au Sud, voyage privé, 12 jours
 - `circuits/eclipse-petit-groupe.html` : éclipse solaire et trésors impériaux, petit groupe, 10 jours
 - `circuits/eclipse-prive.html` : éclipse solaire et trésors impériaux, en privé, 9 jours
+- `circuits/marrakech-prive.html` : Marrakech privé, séjour en villa, 5 jours
+- `circuits/bien-etre-skoura.html` : séjour bien-être dans la palmeraie de Skoura, 7 nuits
 - `devis.html` : demande de devis en quatre étapes
-- `professionnels.html` : présentation pour les tour-opérateurs et agences, demande d'accès
+- `professionnels.html` : présentation pour les tour-opérateurs et agences, formulaire de contact
 
 ## Technique
 
-HTML, CSS et un peu de JavaScript, sans dépendance ni outil de construction. Polices Google Fonts : Gloock, Jost, JetBrains Mono, Outfit. Le mot « côté » du logo est une image provisoire de petite taille, à remplacer par la version vectorielle.
+HTML, CSS et un peu de JavaScript, sans dépendance ni outil de construction. Polices Google Fonts : Gloock, Jost, JetBrains Mono, Outfit. Le mot « côté » du logo est extrait en vectoriel du logo officiel de Côté Voyages (`img/cote-wordmark.svg`).
 
 ## Crédits photos
 
@@ -39,3 +43,9 @@ Photos libres de droits publiées sur Pexels. Merci aux photographes.
 | `img/riad.jpg` | Philippe Lasry | [pexels.com/photo/38891222](https://www.pexels.com/photo/elegant-moroccan-courtyard-in-marrakesh-38891222/) |
 | `img/eclipse.jpg` | Drew Dempsey | [pexels.com/photo/28946775](https://www.pexels.com/photo/captivating-solar-eclipse-in-space-28946775/) |
 | `img/lac-atlas.jpg` | pierre matile | [pexels.com/photo/37700635](https://www.pexels.com/photo/scenic-view-of-ouarzazate-lake-in-morocco-37700635/) |
+| `img/oasis-tinghir.jpg` | Cornelis Johannes (Kees) van Leeuwen | [pexels.com/photo/37441764](https://www.pexels.com/photo/panoramic-view-of-tinghir-oasis-and-village-37441764/) |
+| `img/volubilis.jpg` | Christophe RASCLE | [pexels.com/photo/18767562](https://www.pexels.com/photo/ruins-of-volubilis-basilica-in-morocco-18767562/) |
+| `img/villa-piscine.jpg` | Andrea Musto | [pexels.com/photo/27945034](https://www.pexels.com/photo/a-pool-in-a-courtyard-with-potted-plants-27945034/) |
+| `img/hammam.jpg` | Max Vakhtbovych | [pexels.com/photo/7598373](https://www.pexels.com/photo/bathhouse-interior-with-a-sink-and-seats-7598373/) |
+| `img/tanger-port.jpg` | Reda Faghloumi | [pexels.com/photo/13142301](https://www.pexels.com/photo/port-de-tangier-ville-in-morocco-13142301/) |
+| `img/palmeraie-coucher.jpg` | YOUSSEF elbelghiti | [pexels.com/photo/16919234](https://www.pexels.com/photo/silhouette-of-palm-trees-at-sunset-16919234/) |

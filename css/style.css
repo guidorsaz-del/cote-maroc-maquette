@@ -92,7 +92,7 @@ ul { padding-left: 1.2em; }
 .entete { position: sticky; top: 0; z-index: 50; background: var(--ivoire); border-bottom: 1px solid var(--pierre); }
 .entete .conteneur { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; }
 .logo { display: inline-flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--majorelle-500); line-height: 1; padding: 6px 0; }
-.logo-cote { display: block; width: 110px; height: 44px; background: var(--majorelle-500); -webkit-mask: url(../img/cote-wordmark.png) no-repeat center / contain; mask: url(../img/cote-wordmark.png) no-repeat center / contain; }
+.logo-cote { display: block; width: 110px; height: 44px; background: var(--majorelle-500); -webkit-mask: url(../img/cote-wordmark.svg) no-repeat center / contain; mask: url(../img/cote-wordmark.svg) no-repeat center / contain; }
 .logo-maroc { display: flex; justify-content: center; gap: .17em; font-family: var(--logo); font-weight: 400; font-size: 16.5px; line-height: 1; color: var(--majorelle-500); margin-top: 2px; }
 .logo-maroc span { display: inline-block; }
 .logo-maroc span:nth-child(1) { transform: rotate(-4deg); }
@@ -160,7 +160,25 @@ body.menu-ouvert .entete { z-index: 70; }
 .carte-meta { font-size: .95rem; color: var(--gris); margin-top: auto; padding-top: 10px; border-top: 1px solid var(--pierre); display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
 .carte-meta strong { color: var(--encre); font-weight: 600; }
 .mentions { font-size: .88rem; color: var(--gris); margin-top: 16px; }
-@media (min-width: 700px) { .grille-cartes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 700px) { .grille-cartes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .grille-cartes { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.carte-sur-mesure { background: var(--majorelle-500); border-color: var(--majorelle-500); }
+.carte-sur-mesure .carte-corps { padding: 28px 22px; justify-content: center; }
+.carte-sur-mesure .etiquette { color: var(--majorelle-100); }
+.carte-sur-mesure h3 { color: var(--blanc); }
+.carte-sur-mesure p { color: var(--majorelle-100); }
+.carte-sur-mesure .carte-meta { border-top-color: rgba(255,255,255,.25); color: var(--majorelle-100); }
+.carte-sur-mesure .carte-meta strong, .carte-sur-mesure .lien-fleche { color: var(--blanc); }
+
+/* Programmes en liste (voyages privés) et citation de fin */
+.programme-liste { list-style: none; padding: 0; margin: 0 0 4px; display: grid; gap: 6px; }
+.programme-liste li { position: relative; padding-left: 18px; font-size: .97rem; }
+.programme-liste li::before { content: ''; position: absolute; left: 0; top: .6em; width: 8px; height: 8px; border-radius: 50%; background: var(--corail-700); }
+.lieu { color: var(--gris); font-size: .93rem; margin: 12px 0 0; }
+.lieu strong { color: var(--encre); font-weight: 600; }
+.citation { margin: 0; padding: 28px 24px; background: var(--sable); border-radius: var(--rayon); text-align: center; }
+.citation p { font-family: var(--titre); font-size: 1.35rem; line-height: 1.35; color: var(--majorelle-700); margin: 0; }
+.citation footer { margin-top: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gris); }
 
 /* Envies */
 .grille-envies { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
@@ -197,6 +215,8 @@ body.menu-ouvert .entete { z-index: 70; }
 .personne h3 { font-size: 1.2rem; margin-bottom: 2px; }
 .personne p { color: var(--gris); font-size: .95rem; }
 .photo-attente { aspect-ratio: 1 / 1; border: 2px dashed var(--pierre); border-radius: var(--rayon); background: var(--sable); display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: var(--gris); padding: 8px; }
+.photo-icone { aspect-ratio: 1 / 1; border-radius: var(--rayon); background: var(--majorelle-50); display: flex; align-items: center; justify-content: center; }
+.photo-icone .icone { width: 40px; height: 40px; color: var(--majorelle-500); }
 @media (min-width: 700px) { .grille-equipe { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 /* Quand partir */
