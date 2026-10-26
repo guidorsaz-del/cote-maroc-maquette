@@ -7,6 +7,8 @@ Les pages HTML à la racine, dans circuits/, envies/ et destinations/ sont écra
 import json
 import pathlib
 import re
+import subprocess
+import time
 import urllib.parse
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -24,6 +26,18 @@ ENVIES = lire_json('envies.json')
 FAQ = lire_json('faq.json')
 AVIS = lire_json('avis.json') if (SRC / 'avis.json').exists() else []
 GABARIT = (SRC / 'gabarit' / 'base.html').read_text(encoding='utf-8')
+
+
+def version_build():
+    """Numéro de version ajouté aux liens CSS et JS pour contourner le cache de GitHub Pages."""
+    try:
+        h = subprocess.run(['git', 'rev-parse', '--short', 'HEAD'], capture_output=True, text=True, cwd=ROOT).stdout.strip()
+    except Exception:
+        h = ''
+    return (h or 'dev') + '-' + time.strftime('%Y%m%d%H%M')
+
+
+VERSION = version_build()
 VOYAGE_PAR_SLUG = {v['slug']: v for v in VOYAGES}
 DESTINATION_PAR_SLUG = {d['slug']: d for d in DESTINATIONS}
 ENVIE_PAR_SLUG = {e['slug']: e for e in ENVIES}
@@ -308,6 +322,8 @@ def ecrire_page(chemin, titre, description, main, body_class='', whatsapp='', ti
     page = (GABARIT
             .replace('{{TITLE}}', echapper(titre))
             .replace('{{DESCRIPTION}}', echapper(description))
+            .replace('{{PREFIX}}css/style.css"', '{{PREFIX}}css/style.css?v=' + VERSION + '"')
+            .replace('{{PREFIX}}js/site.js"', '{{PREFIX}}js/site.js?v=' + VERSION + '"')
             .replace('{{PREFIX}}', prefix)
             .replace('{{HEAD_EXTRA}}', '\n'.join(head_extra))
             .replace('{{BODY_CLASS}}', body_class)
