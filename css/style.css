@@ -429,8 +429,11 @@ body.a-barre-mobile .wa-flottant { bottom: 88px; }
 .partage .etiquette { margin-bottom: 8px; }
 .partage .groupe-boutons { gap: 8px; }
 .partage .btn { width: auto; margin: 0; }
-.calendly-bloc { background: var(--blanc); border: 1px solid var(--pierre); border-radius: var(--rayon); padding: 22px; }
-.calendly-inline { min-height: 700px; }
+.calendly-bloc { background: var(--blanc); border: 1px solid var(--pierre); border-radius: var(--rayon); padding: 12px; }
+.calendly-inline { min-height: 720px; width: 100%; }
+.calendly-inline iframe { display: block; width: 100% !important; min-height: 720px; border: 0; }
+.calendly-bloc > .mentions { margin: 8px 10px 4px; }
+.calendly-attente { padding: 22px; }
 .calendly-attente p:first-child { font-size: 1.1rem; }
 .progression-devis { list-style: none; padding: 0; margin: 0 0 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; counter-reset: pas; }
 .progression-devis li { counter-increment: pas; padding: 10px 6px 10px; border-top: 4px solid var(--pierre); font-size: .85rem; color: var(--gris); cursor: pointer; }

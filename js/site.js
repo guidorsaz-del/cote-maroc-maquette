@@ -133,7 +133,7 @@
       var conteneur = document.createElement('div');
       conteneur.className = 'calendly-inline';
       bloc.insertBefore(conteneur, bloc.firstChild);
-      window.Calendly.initInlineWidget({ url: url + (url.indexOf('?') === -1 ? '?' : '&') + 'hide_gdpr_banner=1&primary_color=2b4db8', parentElement: conteneur });
+      window.Calendly.initInlineWidget({ url: url + (url.indexOf('?') === -1 ? '?' : '&') + 'hide_gdpr_banner=1&primary_color=2b4db8', parentElement: conteneur, resize: true });
     };
     document.body.appendChild(script);
   })();
