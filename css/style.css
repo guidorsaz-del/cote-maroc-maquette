@@ -503,3 +503,9 @@ form input.piege { position: absolute !important; left: -9999px !important; widt
 .mentions h2:first-child { margin-top: 0; }
 .mentions ul { padding-left: 20px; }
 .mentions li { margin-bottom: 8px; }
+
+/* Portrait dans les apartés */
+.aparte-personne { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.aparte-personne .portrait-rond { width: 56px; height: 56px; border-width: 2px; }
+.aparte-personne strong { display: block; font-weight: 600; }
+.aparte-personne span { display: block; font-size: .9rem; color: var(--gris); }
