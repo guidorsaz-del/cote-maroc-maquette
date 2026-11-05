@@ -171,8 +171,17 @@
       .catch(function () {
         if (bouton) { bouton.disabled = false; bouton.textContent = texteInitial; }
         message.hidden = false;
+        var lignes = [];
+        Object.keys(donnees).forEach(function (cle) {
+          if (['site_web', 'page', 'type', 'a_des_etapes'].indexOf(cle) !== -1) { return; }
+          var v = donnees[cle];
+          if (Array.isArray(v)) { v = v.join(', '); }
+          if (v) { lignes.push(cle + ' : ' + v); }
+        });
+        var sujet = 'Demande depuis cotemaroc.ch' + (donnees.voyage ? ' : ' + donnees.voyage : '');
+        var mail = 'mailto:sandra@cotevoyages.com?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent('Bonjour,\n\nVoici ma demande envoyée depuis le site :\n\n' + lignes.join('\n') + '\n\nMerci.');
         var wa = 'https://wa.me/41798587217?text=' + encodeURIComponent('Bonjour, je n\'ai pas réussi à envoyer ma demande depuis le site. ' + (donnees.voyage ? 'Voyage : ' + donnees.voyage + '. ' : ''));
-        message.innerHTML = 'L\'envoi n\'a pas abouti. Vous pouvez réessayer dans un instant, ou <a href="' + wa + '">nous écrire sur WhatsApp</a>. Rien n\'est perdu : vos réponses restent dans le formulaire.';
+        message.innerHTML = 'L\'envoi n\'a pas abouti. Rien n\'est perdu : vous pouvez <a href="' + mail + '">envoyer vos réponses par e-mail</a> en un clic, <a href="' + wa + '">nous écrire sur WhatsApp</a>, ou réessayer dans un instant.';
       });
   }
 

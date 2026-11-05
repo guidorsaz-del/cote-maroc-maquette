@@ -25,7 +25,11 @@ DESTINATIONS = lire_json('destinations.json')
 ENVIES = lire_json('envies.json')
 FAQ = lire_json('faq.json')
 AVIS = lire_json('avis.json') if (SRC / 'avis.json').exists() else []
+CREDITS = lire_json('credits.json') if (SRC / 'credits.json').exists() else []
 GABARIT = (SRC / 'gabarit' / 'base.html').read_text(encoding='utf-8')
+URL_SITE = SITE.get('url', '').rstrip('/')
+PAGES_SITEMAP = []
+AUJOURDHUI = time.strftime('%Y-%m-%d')
 
 
 def version_build():
@@ -199,6 +203,78 @@ def avis_html():
       </section>'''
 
 
+def credits_html():
+    """Table des photos Pexels, à partir de src/credits.json."""
+    lignes = []
+    for c in CREDITS:
+        lignes.append(f'''          <tr><td><img src="{c['file']}" alt="" loading="lazy" width="96" height="72"></td><td>{echapper(c['photographer'].strip())}</td><td><a href="{c['url']}" rel="noopener">pexels.com/photo/{c['id']}</a></td></tr>''')
+    return '\n'.join(lignes)
+
+
+def url_absolue(chemin):
+    chemin = str(chemin).replace('\\', '/')
+    if chemin == 'index.html':
+        return URL_SITE + '/'
+    return URL_SITE + '/' + chemin
+
+
+def head_seo(chemin, titre, description, image, indexable=True):
+    """Canonical, Open Graph et Twitter, avec des adresses absolues."""
+    url = url_absolue(chemin)
+    img = URL_SITE + '/' + image.lstrip('/')
+    balises = [
+        f'<link rel="canonical" href="{url}">',
+        f'<meta property="og:type" content="website">',
+        f'<meta property="og:site_name" content="{echapper(SITE["nom"])}">',
+        f'<meta property="og:locale" content="fr_CH">',
+        f'<meta property="og:url" content="{url}">',
+        f'<meta property="og:title" content="{echapper(titre)}">',
+        f'<meta property="og:description" content="{echapper(description)}">',
+        f'<meta property="og:image" content="{img}">',
+        f'<meta name="twitter:card" content="summary_large_image">',
+        f'<meta name="twitter:title" content="{echapper(titre)}">',
+        f'<meta name="twitter:description" content="{echapper(description)}">',
+        f'<meta name="twitter:image" content="{img}">',
+    ]
+    if not indexable:
+        balises.insert(0, '<meta name="robots" content="noindex">')
+    return '\n'.join(balises)
+
+
+def organisation_jsonld():
+    data = {
+        '@context': 'https://schema.org',
+        '@type': 'TravelAgency',
+        'name': SITE['nom'],
+        'url': URL_SITE + '/',
+        'logo': URL_SITE + '/apple-touch-icon.png',
+        'image': URL_SITE + '/img/og-cote-maroc.jpg',
+        'description': SITE['accroche'],
+        'email': SITE['email'],
+        'telephone': '+' + SITE['whatsapp'],
+        'areaServed': 'CH',
+        'knowsLanguage': 'fr',
+        'address': {'@type': 'PostalAddress', 'addressLocality': 'Martigny', 'addressCountry': 'CH'},
+        'parentOrganization': {'@type': 'TravelAgency', 'name': 'Côté Voyages', 'url': 'https://cotevoyages.com'},
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + '</script>'
+
+
+def pied_bas_html(prefix):
+    return f'© {time.strftime("%Y")} Côté Maroc, une marque de Côté Voyages, Martigny · <a href="{prefix}credits.html">Crédits photos et cartes</a>'
+
+
+def image_de_page(main, prefix):
+    """Première image de la bannière, sinon l'image par défaut du site."""
+    m = re.search(r'<section class="banniere[^>]*>\s*<img src="([^"]+)"', main)
+    if m:
+        src = m.group(1)
+        if prefix and src.startswith(prefix):
+            src = src[len(prefix):]
+        return src
+    return 'img/og-cote-maroc.jpg'
+
+
 def carte_point(d):
     etapes = json.dumps([{'nom': d['nom'], 'lat': d['lat'], 'lng': d['lng']}], ensure_ascii=False)
     return f'''<div class="carte-voyage carte-destination" id="carte" data-etapes='{etapes.replace("'", "&#39;")}' data-boucle="false" data-zoom="8" role="img" aria-label="Carte de situation"></div>'''
@@ -287,6 +363,8 @@ def remplacer_marqueurs(main, prefix, contexte):
         if cle == 'calendly':
             contexte['calendly'] = True
             return bloc_calendly(prefix)
+        if cle == 'credits:photos':
+            return credits_html()
         return m.group(0)
 
     main = re.sub(r'<!--\s*([a-z\-:]+)\s*-->', rempl, main)
@@ -305,13 +383,19 @@ def pied_pages_html(prefix):
     return '\n'.join(f'          <li><a href="{prefix}{p["href"]}">{p["libelle"]}</a></li>' for p in SITE['piedPages'])
 
 
-def ecrire_page(chemin, titre, description, main, body_class='', whatsapp='', titre_partage=None, nav_path=None):
+def ecrire_page(chemin, titre, description, main, body_class='', whatsapp='', titre_partage=None, nav_path=None, indexable=True, base=None):
     chemin = pathlib.Path(chemin)
     profondeur = len(chemin.parts) - 1
     prefix = '../' * profondeur
     contexte = {'titre_partage': titre_partage or titre}
     main, head_faq = remplacer_marqueurs(main, prefix, contexte)
     head_extra = [head_faq] if head_faq else []
+    if base:
+        head_extra.insert(0, f'<base href="{base}">')
+    if str(chemin) == 'index.html':
+        head_extra.append(organisation_jsonld())
+    if indexable:
+        PAGES_SITEMAP.append(str(chemin).replace('\\', '/'))
     scripts_extra = []
     if contexte.get('leaflet'):
         head_extra.append('<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">')
@@ -324,6 +408,8 @@ def ecrire_page(chemin, titre, description, main, body_class='', whatsapp='', ti
             .replace('{{DESCRIPTION}}', echapper(description))
             .replace('{{PREFIX}}css/style.css"', '{{PREFIX}}css/style.css?v=' + VERSION + '"')
             .replace('{{PREFIX}}js/site.js"', '{{PREFIX}}js/site.js?v=' + VERSION + '"')
+            .replace('{{HEAD_SEO}}', head_seo(chemin, titre, description, image_de_page(main, prefix), indexable))
+            .replace('{{PIED_BAS}}', pied_bas_html(prefix))
             .replace('{{PREFIX}}', prefix)
             .replace('{{HEAD_EXTRA}}', '\n'.join(head_extra))
             .replace('{{BODY_CLASS}}', body_class)
@@ -361,9 +447,19 @@ def construire_fragments():
         nav_path = meta.get('nav', str(rel).replace('\\', '/'))
         ecrire_page(str(rel), meta['title'], meta['description'], main,
                     body_class=meta.get('bodyClass', ''), whatsapp=meta.get('whatsapp', ''),
-                    titre_partage=meta.get('titrePartage'), nav_path=nav_path)
+                    titre_partage=meta.get('titrePartage'), nav_path=nav_path,
+                    indexable=meta.get('indexable', True), base=meta.get('base'))
         pages.append(str(rel))
     return pages
+
+
+def ecrire_sitemap_et_robots():
+    lignes = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for p in sorted(set(PAGES_SITEMAP), key=lambda x: (x != 'index.html', x)):
+        lignes.append(f'  <url><loc>{url_absolue(p)}</loc><lastmod>{AUJOURDHUI}</lastmod></url>')
+    lignes.append('</urlset>')
+    (ROOT / 'sitemap.xml').write_text('\n'.join(lignes) + '\n', encoding='utf-8')
+    (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {URL_SITE}/sitemap.xml\n', encoding='utf-8')
 
 
 def page_envie(e):
@@ -465,7 +561,8 @@ def main():
         page_envie(e)
     for d in DESTINATIONS:
         page_destination(d)
-    print(f'{len(pages)} pages depuis les fragments, {len(ENVIES)} envies, {len(DESTINATIONS)} destinations.')
+    ecrire_sitemap_et_robots()
+    print(f'{len(pages)} pages depuis les fragments, {len(ENVIES)} envies, {len(DESTINATIONS)} destinations, {len(set(PAGES_SITEMAP))} adresses dans le sitemap.')
 
 
 if __name__ == '__main__':

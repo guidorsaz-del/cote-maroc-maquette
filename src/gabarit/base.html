@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESCRIPTION}}">
+<meta name="theme-color" content="#2B4DB8">
+<link rel="icon" href="{{PREFIX}}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{{PREFIX}}favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{PREFIX}}apple-touch-icon.png">
+{{HEAD_SEO}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=JetBrains+Mono:wght@400;500&family=Jost:wght@300;400;500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,8 +17,6 @@
 {{HEAD_EXTRA}}
 </head>
 <body class="{{BODY_CLASS}}"{{BODY_DATA}}>
-<div class="bandeau-maquette">Maquette de travail · octobre 2026</div>
-
 <header class="entete">
   <div class="conteneur">
     <a class="logo" href="{{PREFIX}}index.html" aria-label="Côté Maroc, accueil">
@@ -72,7 +74,7 @@
         </ul>
       </div>
     </div>
-    <div class="pied-bas">Maquette de travail, octobre 2026. Impressum, conditions de voyage et protection des données : à venir. Photos : Pexels, voir les crédits dans le dépôt. Cartes : OpenStreetMap.</div>
+    <div class="pied-bas">{{PIED_BAS}}</div>
   </div>
 </footer>
 
