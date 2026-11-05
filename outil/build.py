@@ -254,14 +254,14 @@ def organisation_jsonld():
         'telephone': '+' + SITE['whatsapp'],
         'areaServed': 'CH',
         'knowsLanguage': 'fr',
-        'address': {'@type': 'PostalAddress', 'addressLocality': 'Martigny', 'addressCountry': 'CH'},
-        'parentOrganization': {'@type': 'TravelAgency', 'name': 'Côté Voyages', 'url': 'https://cotevoyages.com'},
+        'address': {'@type': 'PostalAddress', 'streetAddress': 'Rue du Rhône 1', 'postalCode': '1920', 'addressLocality': 'Martigny', 'addressCountry': 'CH'},
+        'parentOrganization': {'@type': 'TravelAgency', 'name': 'Côté Voyages', 'legalName': 'Côté Voyages Sàrl', 'taxID': 'CHE-306.612.858', 'url': 'https://cotevoyages.com'},
     }
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + '</script>'
 
 
 def pied_bas_html(prefix):
-    return f'© {time.strftime("%Y")} Côté Maroc, une marque de Côté Voyages, Martigny · <a href="{prefix}credits.html">Crédits photos et cartes</a>'
+    return f'© {time.strftime("%Y")} Côté Maroc, une marque de Côté Voyages, Martigny · <a href="{prefix}mentions.html">Mentions légales</a> · <a href="{prefix}credits.html">Crédits photos et cartes</a>'
 
 
 def image_de_page(main, prefix):

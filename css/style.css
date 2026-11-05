@@ -496,3 +496,10 @@ form input.piege { position: absolute !important; left: -9999px !important; widt
 .bande-note h2 { font-size: 1.4rem; margin: 6px 0 8px; }
 .bande-note p { color: var(--gris); font-size: .97rem; max-width: 60ch; }
 @media (min-width: 700px) { .bande-note { grid-template-columns: auto 1fr; gap: 32px; padding: 28px 32px; } }
+
+/* Mentions légales */
+.mentions { max-width: 720px; }
+.mentions h2 { margin-top: 40px; }
+.mentions h2:first-child { margin-top: 0; }
+.mentions ul { padding-left: 20px; }
+.mentions li { margin-bottom: 8px; }
