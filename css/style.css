@@ -63,7 +63,8 @@ ul { padding-left: 1.2em; }
 .section-sombre { background: var(--majorelle-900); color: var(--majorelle-100); }
 .section-sombre h2, .section-sombre h3 { color: var(--blanc); }
 .entete-section { margin-bottom: 32px; }
-.icone { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.icone { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.icone-pastille { box-sizing: border-box; width: 36px; height: 36px; padding: 8px; border-radius: 50%; background: var(--majorelle-50); color: var(--majorelle-500); }
 
 /* Boutons */
 .btn {
@@ -149,7 +150,7 @@ body.menu-ouvert .entete { z-index: 70; }
 .confiance { background: var(--blanc); border-bottom: 1px solid var(--pierre); }
 .confiance ul { list-style: none; margin: 0; padding: 20px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px; }
 .confiance li { display: flex; gap: 12px; align-items: flex-start; font-size: .95rem; font-weight: 500; }
-.confiance .icone { color: var(--majorelle-500); margin-top: 2px; }
+.confiance .icone { box-sizing: border-box; width: 36px; height: 36px; padding: 8px; border-radius: 50%; background: var(--majorelle-50); color: var(--majorelle-500); margin-top: -4px; }
 @media (min-width: 900px) { .confiance ul { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 /* Cartes de circuits */
@@ -234,7 +235,7 @@ body.menu-ouvert .entete { z-index: 70; }
 .legende .pastille { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--majorelle-500); vertical-align: -1px; margin-right: 6px; }
 .liste-pratique { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
 .liste-pratique li { display: flex; gap: 12px; align-items: flex-start; background: var(--blanc); border: 1px solid var(--pierre); border-radius: var(--rayon); padding: 14px 16px; font-size: .95rem; }
-.liste-pratique .icone { color: var(--majorelle-500); margin-top: 2px; }
+.liste-pratique .icone { box-sizing: border-box; width: 36px; height: 36px; padding: 8px; border-radius: 50%; background: var(--majorelle-50); color: var(--majorelle-500); margin-top: -4px; }
 @media (min-width: 700px) { .mois { grid-template-columns: repeat(6, minmax(0, 1fr)); } .liste-pratique { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (min-width: 1000px) { .mois { grid-template-columns: repeat(12, minmax(0, 1fr)); } }
 
@@ -290,14 +291,15 @@ fieldset { border: 0; padding: 0; margin: 0; }
 .en-bref .prix { font-family: var(--titre); font-size: 2rem; color: var(--majorelle-500); line-height: 1.1; }
 .en-bref .prix small { font-family: var(--texte); font-size: .9rem; color: var(--gris); display: block; margin-top: 4px; }
 .en-bref dl { margin: 18px 0; display: grid; gap: 10px; }
-.en-bref dl div { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; font-size: .95rem; }
-.en-bref dt { grid-column: 1; color: var(--majorelle-500); }
-.en-bref dd { grid-column: 2; margin: 0; }
+.en-bref dl div { display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: start; font-size: .95rem; }
+.en-bref dt { grid-column: 1; width: 36px; height: 36px; border-radius: 50%; background: var(--majorelle-50); color: var(--majorelle-500); display: flex; align-items: center; justify-content: center; }
+.en-bref dt .icone { width: 20px; height: 20px; }
+.en-bref dd { grid-column: 2; margin: 0; padding-top: 7px; }
 .en-bref .btn { width: 100%; }
 .en-bref .btn + .btn { margin-top: 10px; }
 .points-forts { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .points-forts li { display: flex; gap: 12px; align-items: flex-start; }
-.points-forts .icone { color: var(--corail-700); margin-top: 2px; }
+.points-forts .icone { width: 20px; height: 20px; color: var(--corail-700); margin-top: 3px; }
 .ruban-defilant { overflow-x: auto; padding-bottom: 8px; }
 .ruban { list-style: none; margin: 8px 0 0; padding: 12px 4px 0; display: flex; gap: 0; position: relative; min-width: max-content; }
 .ruban li { position: relative; padding: 22px 14px 0; font-size: .9rem; white-space: nowrap; color: var(--encre); }
@@ -352,7 +354,7 @@ body.a-barre-mobile { padding-bottom: 76px; }
 .radios .case { min-height: 44px; }
 .grille-offre { display: grid; gap: 20px; }
 .offre-item { background: var(--blanc); border: 1px solid var(--pierre); border-radius: var(--rayon); padding: 22px 20px; }
-.offre-item .icone { color: var(--majorelle-500); margin-bottom: 12px; width: 28px; height: 28px; }
+.offre-item .icone { box-sizing: border-box; width: 44px; height: 44px; padding: 10px; border-radius: 50%; background: var(--majorelle-50); color: var(--majorelle-500); margin-bottom: 14px; }
 .offre-item h3 { font-size: 1.2rem; margin-bottom: 6px; }
 .offre-item p { color: var(--gris); font-size: .95rem; }
 .encadre-references { background: var(--majorelle-50); border: 1px solid var(--majorelle-100); border-radius: var(--rayon); padding: 22px; }
@@ -376,6 +378,7 @@ body.a-barre-mobile { padding-bottom: 76px; }
 .wa-flottant { position: fixed; right: 16px; bottom: 16px; z-index: 45; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 10px 16px; border-radius: 999px; background: #1F8A4C; color: var(--blanc); text-decoration: none; font-weight: 500; box-shadow: 0 6px 20px rgba(27,30,51,.18); }
 .wa-flottant:hover { background: #176b3b; color: var(--blanc); }
 .wa-flottant .icone { width: 22px; height: 22px; }
+.icone-whatsapp { fill: currentColor; stroke: none; }
 body.a-barre-mobile .wa-flottant { bottom: 88px; }
 @media (min-width: 900px) { body.a-barre-mobile .wa-flottant { bottom: 16px; } }
 @media (max-width: 420px) { .wa-flottant span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } .wa-flottant { padding: 12px; } }

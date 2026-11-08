@@ -508,7 +508,7 @@ def page_destination(d):
     prefix = '../'
     voyages = [v['slug'] for v in VOYAGES if d['slug'] in v['destinations']]
     textes = '\n'.join(f'        <p>{t}</p>' for t in d['textes'])
-    a_voir = '\n'.join(f'            <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><span>{x}</span></li>' for x in d['aVoir'])
+    a_voir = '\n'.join(f'            <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><span>{x}</span></li>' for x in d['aVoir'])
     vols = f'<p class="mentions">{d["vols"]}</p>' if d.get('vols') else ''
     main = f'''  <section class="banniere banniere-fiche" aria-labelledby="titre-destination">
     <img src="{prefix}img/{d['image']}" alt="{echapper(d['alt'])}" fetchpriority="high">
