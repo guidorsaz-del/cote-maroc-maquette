@@ -14,8 +14,8 @@
     "resume": "Marrakech, Casablanca, Rabat, Fès, le Sahara et l'Atlas, avec guide accompagnateur et vols depuis Genève.",
     "image": "ait-ben-haddou.jpg",
     "alt": "Le ksar d'Aït Ben Haddou, village fortifié en terre au pied de l'Atlas",
-    "dates": "25 mars au 3 avril 2027 et 20 au 29 octobre 2027",
-    "mois": [3, 4, 10],
+    "dates": "20 au 29 octobre 2027 (départ du 25 mars 2027 complet)",
+    "mois": [10],
     "boucle": true,
     "etapes": [
       {"nom": "Marrakech", "lat": 31.6295, "lng": -7.9811},

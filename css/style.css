@@ -331,6 +331,8 @@ fieldset { border: 0; padding: 0; margin: 0; }
 .tableau-dates th, .tableau-dates td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--pierre); }
 .tableau-dates th { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gris); font-weight: 500; }
 .tableau-dates td strong { font-weight: 600; }
+.tableau-dates tr.complet td, .date-complete { color: var(--gris); }
+.badge-complet { display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--corail-50); color: var(--corail-900); font: 500 11px/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
 .barre-mobile { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--blanc); border-top: 1px solid var(--pierre); padding: 10px var(--gouttiere); display: flex; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 -4px 16px rgba(27,30,51,.08); }
 .barre-mobile .prix-barre { font-weight: 600; line-height: 1.2; }
 .barre-mobile .prix-barre small { display: block; font-weight: 400; font-size: .8rem; color: var(--gris); }
